@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Service Detail | Neurofit Advance Physiotherapy Center</title>
+  <meta name="description" content="Detailed information about our physiotherapy services at Neurofit Advance Physiotherapy Center.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">Neurofit <span>Physio</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html" class="active">Services</a><a href="blog.html">Blog</a><a href="reviews.html">Reviews</a><a href="contact.html">Contact</a>
+        <a href="appointment.html" class="btn btn-primary nav-cta">Book Now</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 id="sdTitle">Back Pain Treatment</h1>
+      <p id="sdSubtitle">Advanced spinal therapy for lasting relief</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="services.html">Services</a><span>/</span><span id="sdBreadcrumb">Back Pain</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container sd-layout">
+      <div class="sd-content" id="sdContent">
+        <h2>What is Back Pain Treatment?</h2>
+        <p>Back pain is one of the most common conditions affecting people of all ages. At Neurofit Advance Physiotherapy Center, we use a combination of manual therapy, electrotherapy, and therapeutic exercises to provide lasting relief from both acute and chronic back pain.</p>
+        <p>Our evidence-based approach targets the root cause of your pain, not just the symptoms. Whether you're dealing with a herniated disc, sciatica, muscle strain, or postural issues, our specialized treatment protocols are designed to restore your mobility and get you back to your active life.</p>
+
+        <h3>Our Treatment Process</h3>
+        <div class="sd-timeline">
+          <div class="sd-step"><h4>Step 1: Detailed Assessment</h4><p>Comprehensive evaluation of your condition, posture, range of motion, and pain patterns to create a personalized treatment plan.</p></div>
+          <div class="sd-step"><h4>Step 2: Pain Management</h4><p>Immediate pain relief through advanced modalities including ultrasound therapy, TENS, IFT, and manual techniques.</p></div>
+          <div class="sd-step"><h4>Step 3: Therapeutic Exercises</h4><p>Customized exercise program to strengthen core muscles, improve flexibility, and prevent recurrence.</p></div>
+          <div class="sd-step"><h4>Step 4: Posture Correction</h4><p>Ergonomic advice and postural training to maintain proper alignment in daily activities and work.</p></div>
+          <div class="sd-step"><h4>Step 5: Maintenance & Prevention</h4><p>Home exercise program and regular follow-ups to ensure long-term recovery and prevent future episodes.</p></div>
+        </div>
+
+        <h3>Key Benefits</h3>
+        <div class="sd-benefits">
+          <div class="sd-benefit"><i class="fas fa-check-circle"></i> Non-surgical pain relief</div>
+          <div class="sd-benefit"><i class="fas fa-check-circle"></i> Personalized treatment plans</div>
+          <div class="sd-benefit"><i class="fas fa-check-circle"></i> Advanced electrotherapy</div>
+          <div class="sd-benefit"><i class="fas fa-check-circle"></i> Manual therapy techniques</div>
+          <div class="sd-benefit"><i class="fas fa-check-circle"></i> Long-term prevention</div>
+          <div class="sd-benefit"><i class="fas fa-check-circle"></i> Home exercise guidance</div>
+        </div>
+
+        <h3>Frequently Asked Questions</h3>
+        <div class="faq-list" id="faqList">
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">How many sessions will I need? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-a"><p>Most patients experience significant relief within 8-15 sessions. The exact number depends on the severity and chronicity of your condition. Our doctor will provide a clear treatment plan after your initial assessment.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Is physiotherapy painful? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-a"><p>Physiotherapy should not cause additional pain. While some techniques may cause mild discomfort during treatment, the overall goal is pain relief. Our therapists always work within your comfort level.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Can I continue my daily activities during treatment? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-a"><p>Yes, in most cases you can continue your daily activities. Our therapist will advise you on any modifications needed and provide ergonomic tips for your workplace and home.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">Do you offer home visits for treatment? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-a"><p>Yes, we offer home physiotherapy visits for patients who are unable to travel to the clinic. Contact us to schedule a home visit appointment.</p></div>
+          </div>
+        </div>
+
+        <div style="margin-top:32px">
+          <a href="appointment.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book This Treatment</a>
+        </div>
+      </div>
+
+      <aside class="sd-sidebar">
+        <div class="sd-sidebar-card">
+          <h4>📋 Quick Booking</h4>
+          <form id="quickBookForm">
+            <div class="form-group"><input type="text" placeholder="Your Name *" required></div>
+            <div class="form-group"><input type="tel" placeholder="Phone *" required></div>
+            <div class="form-group"><input type="date" required></div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center"><i class="fas fa-paper-plane"></i> Book Now</button>
+          </form>
+        </div>
+        <div class="sd-sidebar-card">
+          <h4>Other Services</h4>
+          <a href="service-detail.html?service=back-pain" class="sd-related-link"><i class="fas fa-chevron-right"></i> Back Pain Treatment</a>
+          <a href="service-detail.html?service=neck-pain" class="sd-related-link"><i class="fas fa-chevron-right"></i> Neck Pain Therapy</a>
+          <a href="service-detail.html?service=sports-injury" class="sd-related-link"><i class="fas fa-chevron-right"></i> Sports Injury Rehab</a>
+          <a href="service-detail.html?service=paralysis" class="sd-related-link"><i class="fas fa-chevron-right"></i> Paralysis Treatment</a>
+          <a href="service-detail.html?service=post-surgery" class="sd-related-link"><i class="fas fa-chevron-right"></i> Post Surgery Rehab</a>
+          <a href="service-detail.html?service=pediatric" class="sd-related-link"><i class="fas fa-chevron-right"></i> Pediatric Physiotherapy</a>
+          <a href="service-detail.html?service=geriatric" class="sd-related-link"><i class="fas fa-chevron-right"></i> Geriatric Care</a>
+          <a href="service-detail.html?service=cardio-pulmonary" class="sd-related-link"><i class="fas fa-chevron-right"></i> Cardio Pulmonary Rehab</a>
+        </div>
+        <div class="sd-sidebar-card" style="background:var(--primary);color:#fff;text-align:center">
+          <i class="fas fa-phone-alt" style="font-size:1.5rem;margin-bottom:8px"></i>
+          <h4 style="color:#fff;border:none;padding:0">Need Help?</h4>
+          <p style="font-size:.9rem;opacity:.9;margin:8px 0">Call us for instant guidance</p>
+          <a href="tel:+919876543210" style="color:var(--accent);font-weight:700;font-size:1.1rem">+91 98765 43210</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about"><h3>Neurofit <span>Physio</span></h3><p>Trusted physiotherapy clinic offering evidence-based treatments.</p>
+          <div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="service-detail.html?service=back-pain">Back Pain</a></li><li><a href="service-detail.html?service=neck-pain">Neck Pain</a></li><li><a href="service-detail.html?service=sports-injury">Sports Injury</a></li><li><a href="service-detail.html?service=paralysis">Paralysis</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+919876543210"><i class="fas fa-phone-alt"></i> +91 98765 43210</a></li><li><a href="mailto:info@neurofitphysio.com"><i class="fas fa-envelope"></i> info@neurofitphysio.com</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Neurofit Advance Physiotherapy Center. All Rights Reserved.</p></div>
+    </div>
+  </footer>
+  <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float" id="whatsappBtn"><i class="fab fa-whatsapp"></i></a>
+  <a href="#" class="back-top" id="backTop"><i class="fas fa-chevron-up"></i></a>
+  <script src="script.js"></script>
+  <script src="pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment Online | Neurofit Advance Physiotherapy Center</title>
+  <meta name="description" content="Book your physiotherapy appointment online at Neurofit. View doctor's schedule, choose your time slot, and get confirmed instantly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">Neurofit <span>Physio</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="blog.html">Blog</a><a href="reviews.html">Reviews</a><a href="contact.html">Contact</a>
+        <a href="appointment.html" class="btn btn-primary nav-cta active">Book Now</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Book Appointment Online</h1>
+      <p>Choose Your Service, Pick a Time & Book Instantly</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Book Appointment</span></div>
+    </div>
+  </section>
+
+  <!-- Meeting Schedule -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title"><h2>Doctor's Weekly Schedule</h2><p>Check Availability & Choose Your Preferred Slot</p></div>
+      <div style="overflow-x:auto">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Time Slot</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>9:00 - 10:00 AM</strong></td>
+              <td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td>
+              <td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td>
+            </tr>
+            <tr>
+              <td><strong>10:00 - 11:00 AM</strong></td>
+              <td class="slot-available">✓ Available</td><td class="slot-busy">✗ Busy</td><td class="slot-available">✓ Available</td>
+              <td class="slot-available">✓ Available</td><td class="slot-busy">✗ Busy</td><td class="slot-available">✓ Available</td>
+            </tr>
+            <tr>
+              <td><strong>11:00 - 12:00 PM</strong></td>
+              <td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td><td class="slot-busy">✗ Busy</td>
+              <td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td><td class="slot-busy">✗ Busy</td>
+            </tr>
+            <tr>
+              <td><strong>12:00 - 1:00 PM</strong></td>
+              <td colspan="6" style="color:var(--gray-500);font-style:italic">Lunch Break</td>
+            </tr>
+            <tr>
+              <td><strong>2:00 - 3:00 PM</strong></td>
+              <td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td>
+              <td class="slot-busy">✗ Busy</td><td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td>
+            </tr>
+            <tr>
+              <td><strong>3:00 - 4:00 PM</strong></td>
+              <td class="slot-busy">✗ Busy</td><td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td>
+              <td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td>
+            </tr>
+            <tr>
+              <td><strong>4:00 - 5:00 PM</strong></td>
+              <td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td>
+              <td class="slot-available">✓ Available</td><td class="slot-busy">✗ Busy</td><td class="slot-available">✓ Available</td>
+            </tr>
+            <tr>
+              <td><strong>5:00 - 6:00 PM</strong></td>
+              <td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td><td class="slot-busy">✗ Busy</td>
+              <td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td><td class="slot-busy">✗ Busy</td>
+            </tr>
+            <tr>
+              <td><strong>6:00 - 7:00 PM</strong></td>
+              <td class="slot-available">✓ Available</td><td class="slot-busy">✗ Busy</td><td class="slot-available">✓ Available</td>
+              <td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td>
+            </tr>
+            <tr>
+              <td><strong>7:00 - 8:00 PM</strong></td>
+              <td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td>
+              <td class="slot-busy">✗ Busy</td><td class="slot-available">✓ Available</td><td class="slot-available">✓ Available</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align:center;margin-top:16px;font-size:.88rem;color:var(--gray-500)"><i class="fas fa-info-circle"></i> Schedule is indicative. Actual availability confirmed upon booking. Sunday: Closed.</p>
+    </div>
+  </section>
+
+  <!-- Booking Wizard -->
+  <section class="section" style="background:var(--off-white)">
+    <div class="container">
+      <div class="section-title"><h2>Book Your Appointment</h2><p>Follow 3 Simple Steps to Book Your Visit</p></div>
+
+      <!-- Wizard Steps Indicator -->
+      <div class="wizard-steps">
+        <div class="wizard-step active" data-step="1"><span class="step-num">1</span><span>Service & Time</span></div>
+        <div class="wizard-step" data-step="2"><span class="step-num">2</span><span>Your Details</span></div>
+        <div class="wizard-step" data-step="3"><span class="step-num">3</span><span>Confirm</span></div>
+      </div>
+
+      <div class="wizard-form" style="max-width:700px;margin:0 auto">
+        <!-- Step 1 -->
+        <div class="wizard-panel active" id="wizStep1">
+          <h3 style="margin-bottom:16px">Choose Meeting Type</h3>
+          <div class="meeting-types">
+            <div class="meeting-type selected" onclick="selectMeetingType(this)">
+              <i class="fas fa-hospital"></i>
+              <h4>In-Person Visit</h4>
+              <p>Visit our clinic for hands-on treatment</p>
+            </div>
+            <div class="meeting-type" onclick="selectMeetingType(this)">
+              <i class="fas fa-video"></i>
+              <h4>Video Consultation</h4>
+              <p>Online guidance from home</p>
+            </div>
+            <div class="meeting-type" onclick="selectMeetingType(this)">
+              <i class="fas fa-home"></i>
+              <h4>Home Visit</h4>
+              <p>Physiotherapist visits your home</p>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top:20px">
+            <label style="font-weight:600;margin-bottom:8px;display:block">Select Service *</label>
+            <select required id="wizService">
+              <option value="">Choose a service...</option>
+              <option>Back Pain Treatment</option>
+              <option>Neck Pain Therapy</option>
+              <option>Sports Injury Rehab</option>
+              <option>Paralysis / Neuro Rehab</option>
+              <option>Post Surgery Rehab</option>
+              <option>Pediatric Physiotherapy</option>
+              <option>Geriatric Care</option>
+              <option>Cardio Pulmonary Rehab</option>
+              <option>General Consultation</option>
+            </select>
+          </div>
+
+          <div class="date-time-grid">
+            <div class="form-group">
+              <label style="font-weight:600;margin-bottom:8px;display:block">Preferred Date *</label>
+              <input type="date" required id="wizDate">
+            </div>
+            <div>
+              <label style="font-weight:600;margin-bottom:8px;display:block">Preferred Time *</label>
+              <div class="time-slots">
+                <div class="time-slot" onclick="selectTimeSlot(this)">9:00 AM</div>
+                <div class="time-slot" onclick="selectTimeSlot(this)">10:00 AM</div>
+                <div class="time-slot" onclick="selectTimeSlot(this)">11:00 AM</div>
+                <div class="time-slot" onclick="selectTimeSlot(this)">2:00 PM</div>
+                <div class="time-slot" onclick="selectTimeSlot(this)">3:00 PM</div>
+                <div class="time-slot" onclick="selectTimeSlot(this)">4:00 PM</div>
+                <div class="time-slot" onclick="selectTimeSlot(this)">5:00 PM</div>
+                <div class="time-slot" onclick="selectTimeSlot(this)">6:00 PM</div>
+                <div class="time-slot" onclick="selectTimeSlot(this)">7:00 PM</div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:24px" onclick="wizardNext(2)">Next: Your Details <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="wizard-panel" id="wizStep2">
+          <h3 style="margin-bottom:16px">Your Personal Details</h3>
+          <div class="form-group"><input type="text" placeholder="Full Name *" required id="wizName"></div>
+          <div class="form-group"><input type="tel" placeholder="Phone / WhatsApp Number *" required id="wizPhone"></div>
+          <div class="form-group"><input type="email" placeholder="Email Address" id="wizEmail"></div>
+          <div class="date-time-grid">
+            <div class="form-group"><input type="number" placeholder="Age *" required id="wizAge" min="1" max="120"></div>
+            <div class="form-group">
+              <select required id="wizGender">
+                <option value="">Gender *</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><textarea placeholder="Describe your condition briefly (pain location, duration, severity)..." id="wizCondition" rows="4"></textarea></div>
+          <div style="display:flex;gap:12px">
+            <button class="btn btn-outline" style="flex:1;justify-content:center" onclick="wizardNext(1)"><i class="fas fa-arrow-left"></i> Back</button>
+            <button class="btn btn-primary" style="flex:2;justify-content:center" onclick="wizardNext(3)">Review & Confirm <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="wizard-panel" id="wizStep3">
+          <div class="confirmation-card">
+            <i class="fas fa-check-circle"></i>
+            <h3>Review Your Appointment</h3>
+            <p style="color:var(--gray-500);margin-bottom:20px">Please review your details before submitting</p>
+            <div style="text-align:left;background:var(--white);padding:20px;border-radius:var(--radius);margin-bottom:20px" id="wizSummary">
+              <!-- Filled dynamically -->
+            </div>
+            <div style="display:flex;gap:12px">
+              <button class="btn btn-outline" style="flex:1;justify-content:center" onclick="wizardNext(2)"><i class="fas fa-arrow-left"></i> Edit</button>
+              <button class="btn btn-primary" style="flex:2;justify-content:center" onclick="submitWizard()"><i class="fab fa-whatsapp"></i> Confirm via WhatsApp</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick WhatsApp CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Prefer Quick Booking?</h2>
+      <p>Send us a WhatsApp message and we'll book your appointment instantly.</p>
+      <a href="https://wa.me/919876543210?text=Hi%20Neurofit!%20I%20want%20to%20book%20an%20appointment." target="_blank" class="btn btn-white"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about"><h3>Neurofit <span>Physio</span></h3><p>Trusted physiotherapy clinic offering evidence-based treatments.</p>
+          <div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="service-detail.html?service=back-pain">Back Pain</a></li><li><a href="service-detail.html?service=neck-pain">Neck Pain</a></li><li><a href="service-detail.html?service=sports-injury">Sports Injury</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+919876543210"><i class="fas fa-phone-alt"></i> +91 98765 43210</a></li><li><a href="mailto:info@neurofitphysio.com"><i class="fas fa-envelope"></i> info@neurofitphysio.com</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Neurofit Advance Physiotherapy Center. All Rights Reserved.</p></div>
+    </div>
+  </footer>
+  <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float" id="whatsappBtn"><i class="fab fa-whatsapp"></i></a>
+  <a href="#" class="back-top" id="backTop"><i class="fas fa-chevron-up"></i></a>
+  <script src="script.js"></script>
+  <script src="pages.js"></script>
+</body>
+</html>
