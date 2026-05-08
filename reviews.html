@@ -1,25 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Patient Reviews & Before/After | Neurofit Advance Physiotherapy Center</title>
-  <meta name="description" content="See real patient reviews and before/after treatment results at Neurofit Advance Physiotherapy Center.">
+  <meta name="description"
+    content="See real patient reviews and before/after treatment results at Neurofit Advance Physiotherapy Center.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="pages.css">
 </head>
+
 <body>
   <nav class="navbar scrolled" id="navbar">
     <div class="container">
       <a href="index.html" class="nav-logo">Neurofit <span>Physio</span></a>
       <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="blog.html">Blog</a><a href="reviews.html" class="active">Reviews</a><a href="contact.html">Contact</a>
-        <a href="appointment.html" class="btn btn-primary nav-cta">Book Now</a>
+        <a href="about.html">About</a>
+        <div class="nav-dropdown">
+          <a href="services.html">Conditions We Treat <i class="fas fa-chevron-down" style="font-size:0.8em"></i></a>
+          <div class="dropdown-menu">
+            <a href="service-detail.html?service=back-pain">Back Pain Treatment</a>
+            <a href="service-detail.html?service=neck-pain">Neck Pain Therapy</a>
+            <a href="service-detail.html?service=sports-injury">Sports Injury Rehab</a>
+            <a href="service-detail.html?service=paralysis">Paralysis Treatment</a>
+            <a href="service-detail.html?service=post-surgery">Post Surgery Rehab</a>
+            <a href="service-detail.html?service=pediatric">Pediatric Physiotherapy</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#">For Patients <i class="fas fa-chevron-down" style="font-size:0.8em"></i></a>
+          <div class="dropdown-menu">
+            <a href="reviews.html">Patient Reviews</a>
+            <a href="#">Knowledge Center</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </div>
+        <a href="offers.html">Offers</a>
+        <a href="contact.html">Contact</a>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <div class="nav-right">
+        <a href="appointment.html" class="btn btn-primary nav-cta">Book Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -36,7 +66,8 @@
     <div class="container reviews-stats">
       <div class="review-stat">
         <div class="big-num">4.9</div>
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+            class="fas fa-star"></i><i class="fas fa-star"></i></div>
         <div class="label">Overall Rating</div>
       </div>
       <div class="review-stat">
@@ -57,12 +88,17 @@
   <!-- Before/After Section -->
   <section class="ba-section">
     <div class="container">
-      <div class="section-title"><h2>Before & After Results</h2><p>See the Remarkable Transformation of Our Patients</p></div>
+      <div class="section-title">
+        <h2>Before & After Results</h2>
+        <p>See the Remarkable Transformation of Our Patients</p>
+      </div>
       <div class="ba-grid">
         <div class="ba-card reveal">
           <div class="ba-photos">
-            <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=400&q=80" alt="Before - Back Pain Patient">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="After - Back Pain Recovery">
+            <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=400&q=80"
+              alt="Before - Back Pain Patient">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80"
+              alt="After - Back Pain Recovery">
             <span class="ba-label before">Before</span>
             <span class="ba-label after">After</span>
             <div class="ba-divider"></div>
@@ -70,15 +106,18 @@
           <div class="ba-info">
             <h4>Rajesh Kumar, 45</h4>
             <span class="condition">Chronic Lower Back Pain — L4-L5 Disc Bulge</span>
-            <p>Could barely walk 100 meters. After 20 sessions of manual therapy, electrotherapy, and core strengthening exercises, now walks 5km daily without any pain.</p>
+            <p>Could barely walk 100 meters. After 20 sessions of manual therapy, electrotherapy, and core strengthening
+              exercises, now walks 5km daily without any pain.</p>
             <span class="duration"><i class="fas fa-clock"></i> 3 Months Treatment</span>
           </div>
         </div>
 
         <div class="ba-card reveal">
           <div class="ba-photos">
-            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&q=80" alt="Before - Paralysis Patient">
-            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80" alt="After - Paralysis Recovery">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&q=80"
+              alt="Before - Paralysis Patient">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80"
+              alt="After - Paralysis Recovery">
             <span class="ba-label before">Before</span>
             <span class="ba-label after">After</span>
             <div class="ba-divider"></div>
@@ -86,15 +125,18 @@
           <div class="ba-info">
             <h4>Sunita Devi, 58</h4>
             <span class="condition">Right-side Hemiplegia (Post Stroke)</span>
-            <p>Lost mobility in right arm and leg after stroke. After 6 months of intensive neuro rehab, regained 85% function with independent walking ability.</p>
+            <p>Lost mobility in right arm and leg after stroke. After 6 months of intensive neuro rehab, regained 85%
+              function with independent walking ability.</p>
             <span class="duration"><i class="fas fa-clock"></i> 6 Months Treatment</span>
           </div>
         </div>
 
         <div class="ba-card reveal">
           <div class="ba-photos">
-            <img src="https://images.unsplash.com/photo-1598257006458-087169a1f08d?w=400&q=80" alt="Before - Sports Injury">
-            <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=400&q=80" alt="After - Sports Recovery">
+            <img src="https://images.unsplash.com/photo-1598257006458-087169a1f08d?w=400&q=80"
+              alt="Before - Sports Injury">
+            <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=400&q=80"
+              alt="After - Sports Recovery">
             <span class="ba-label before">Before</span>
             <span class="ba-label after">After</span>
             <div class="ba-divider"></div>
@@ -102,7 +144,8 @@
           <div class="ba-info">
             <h4>Arjun Singh, 24</h4>
             <span class="condition">ACL Tear — Post Reconstruction Surgery</span>
-            <p>Professional cricketer with ACL tear. After structured post-surgical rehab protocol, returned to competitive sports in 4 months ahead of schedule.</p>
+            <p>Professional cricketer with ACL tear. After structured post-surgical rehab protocol, returned to
+              competitive sports in 4 months ahead of schedule.</p>
             <span class="duration"><i class="fas fa-clock"></i> 4 Months Treatment</span>
           </div>
         </div>
@@ -110,7 +153,8 @@
         <div class="ba-card reveal">
           <div class="ba-photos">
             <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&q=80" alt="Before - Pediatric">
-            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&q=80" alt="After - Pediatric Recovery">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&q=80"
+              alt="After - Pediatric Recovery">
             <span class="ba-label before">Before</span>
             <span class="ba-label after">After</span>
             <div class="ba-divider"></div>
@@ -118,7 +162,8 @@
           <div class="ba-info">
             <h4>Baby Ananya, 3</h4>
             <span class="condition">Delayed Motor Milestones — Cerebral Palsy</span>
-            <p>Could not sit independently at age 2. With specialized pediatric physiotherapy and neurodevelopmental training, now walks with minimal support.</p>
+            <p>Could not sit independently at age 2. With specialized pediatric physiotherapy and neurodevelopmental
+              training, now walks with minimal support.</p>
             <span class="duration"><i class="fas fa-clock"></i> 8 Months Treatment</span>
           </div>
         </div>
@@ -129,54 +174,87 @@
   <!-- Text Reviews -->
   <section style="background:var(--off-white)">
     <div class="container">
-      <div class="section-title"><h2>What Our Patients Say</h2><p>Honest Reviews from Patients Who Trust Us</p></div>
+      <div class="section-title">
+        <h2>What Our Patients Say</h2>
+        <p>Honest Reviews from Patients Who Trust Us</p>
+      </div>
       <div class="reviews-list">
         <div class="review-card reveal">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p>"I had severe back pain for 2 years. After just 15 sessions at Neurofit, I feel like a new person. The treatment was scientific and the staff is incredibly caring. Highly recommended!"</p>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"I had severe back pain for 2 years. After just 15 sessions at Neurofit, I feel like a new person. The
+            treatment was scientific and the staff is incredibly caring. Highly recommended!"</p>
           <div class="reviewer">
             <div class="reviewer-avatar">RS</div>
-            <div><div class="reviewer-name">Rajesh Sharma</div><div class="reviewer-type">Back Pain Recovery • 3 months ago</div></div>
+            <div>
+              <div class="reviewer-name">Rajesh Sharma</div>
+              <div class="reviewer-type">Back Pain Recovery • 3 months ago</div>
+            </div>
           </div>
         </div>
         <div class="review-card reveal">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p>"Best physiotherapy center in the city! Dr. is very professional and caring. My mother recovered well from paralysis treatment. The neuro rehab program is excellent."</p>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Best physiotherapy center in the city! Dr. is very professional and caring. My mother recovered well from
+            paralysis treatment. The neuro rehab program is excellent."</p>
           <div class="reviewer">
             <div class="reviewer-avatar">PM</div>
-            <div><div class="reviewer-name">Priya Mehta</div><div class="reviewer-type">Paralysis Treatment • 2 months ago</div></div>
+            <div>
+              <div class="reviewer-name">Priya Mehta</div>
+              <div class="reviewer-type">Paralysis Treatment • 2 months ago</div>
+            </div>
           </div>
         </div>
         <div class="review-card reveal">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p>"After my ACL surgery, Neurofit helped me get back on the football field in 4 months. The rehab protocol was systematic and results-oriented. Amazing team!"</p>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"After my ACL surgery, Neurofit helped me get back on the football field in 4 months. The rehab protocol
+            was systematic and results-oriented. Amazing team!"</p>
           <div class="reviewer">
             <div class="reviewer-avatar">AP</div>
-            <div><div class="reviewer-name">Arjun Patel</div><div class="reviewer-type">Sports Injury Rehab • 1 month ago</div></div>
+            <div>
+              <div class="reviewer-name">Arjun Patel</div>
+              <div class="reviewer-type">Sports Injury Rehab • 1 month ago</div>
+            </div>
           </div>
         </div>
         <div class="review-card reveal">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p>"The clinic is very clean and well-equipped with modern machines. Staff is friendly and the treatment approach is very scientific. My neck pain is completely gone now."</p>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"The clinic is very clean and well-equipped with modern machines. Staff is friendly and the treatment
+            approach is very scientific. My neck pain is completely gone now."</p>
           <div class="reviewer">
             <div class="reviewer-avatar">SJ</div>
-            <div><div class="reviewer-name">Sneha Joshi</div><div class="reviewer-type">Neck Pain Therapy • 3 weeks ago</div></div>
+            <div>
+              <div class="reviewer-name">Sneha Joshi</div>
+              <div class="reviewer-type">Neck Pain Therapy • 3 weeks ago</div>
+            </div>
           </div>
         </div>
         <div class="review-card reveal">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p>"My child had delayed milestones and we were very worried. The pediatric physio sessions at Neurofit made a wonderful difference. Our child is now walking! Very grateful to the team."</p>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"My child had delayed milestones and we were very worried. The pediatric physio sessions at Neurofit made a
+            wonderful difference. Our child is now walking! Very grateful to the team."</p>
           <div class="reviewer">
             <div class="reviewer-avatar">MD</div>
-            <div><div class="reviewer-name">Meena Desai</div><div class="reviewer-type">Pediatric Physiotherapy • 1 month ago</div></div>
+            <div>
+              <div class="reviewer-name">Meena Desai</div>
+              <div class="reviewer-type">Pediatric Physiotherapy • 1 month ago</div>
+            </div>
           </div>
         </div>
         <div class="review-card reveal">
-          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-          <p>"Post knee replacement, I was struggling to walk. The rehab program at Neurofit was excellent and well-structured. Walking freely now and even climbing stairs without pain!"</p>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Post knee replacement, I was struggling to walk. The rehab program at Neurofit was excellent and
+            well-structured. Walking freely now and even climbing stairs without pain!"</p>
           <div class="reviewer">
             <div class="reviewer-avatar">VS</div>
-            <div><div class="reviewer-name">Vikram Singh</div><div class="reviewer-type">Post Surgery Rehab • 2 weeks ago</div></div>
+            <div>
+              <div class="reviewer-name">Vikram Singh</div>
+              <div class="reviewer-type">Post Surgery Rehab • 2 weeks ago</div>
+            </div>
           </div>
         </div>
       </div>
@@ -195,18 +273,50 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-about"><h3>Neurofit <span>Physio</span></h3><p>Trusted physiotherapy clinic offering evidence-based treatments.</p>
-          <div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+        <div class="footer-about">
+          <h3>Neurofit <span>Physio</span></h3>
+          <p>Trusted physiotherapy clinic offering evidence-based treatments.</p>
+          <div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
+                class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i
+                class="fab fa-linkedin-in"></i></a></div>
         </div>
-        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div class="footer-col"><h4>Services</h4><ul><li><a href="service-detail.html?service=back-pain">Back Pain</a></li><li><a href="service-detail.html?service=neck-pain">Neck Pain</a></li><li><a href="service-detail.html?service=sports-injury">Sports Injury</a></li></ul></div>
-        <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+919876543210"><i class="fas fa-phone-alt"></i> +91 98765 43210</a></li><li><a href="mailto:info@neurofitphysio.com"><i class="fas fa-envelope"></i> info@neurofitphysio.com</a></li></ul></div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="offers.html">Offers</a>
+        <a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="service-detail.html?service=back-pain">Back Pain</a></li>
+            <li><a href="service-detail.html?service=neck-pain">Neck Pain</a></li>
+            <li><a href="service-detail.html?service=sports-injury">Sports Injury</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+919023931863"><i class="fas fa-phone-alt"></i> +91 90239 31863</a></li>
+            <li><a href="mailto:info@neurofitphysio.com"><i class="fas fa-envelope"></i> info@neurofitphysio.com</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-bottom"><p>&copy; 2026 Neurofit Advance Physiotherapy Center. All Rights Reserved.</p></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Neurofit Advance Physiotherapy Center. All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
-  <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float" id="whatsappBtn"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://wa.me/919023931863" target="_blank" class="whatsapp-float" id="whatsappBtn"><i
+      class="fab fa-whatsapp"></i></a>
   <a href="#" class="back-top" id="backTop"><i class="fas fa-chevron-up"></i></a>
   <script src="script.js"></script>
 </body>
+
 </html>

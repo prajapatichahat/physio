@@ -1,56 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neurofit Advance Physiotherapy Center | Expert Physiotherapy Care</title>
-  <meta name="description" content="Neurofit Advance Physiotherapy Center offers expert physiotherapy for back pain, neck pain, sports injuries, paralysis & post-surgery rehab. 5000+ happy patients. Book now!">
+  <meta name="description"
+    content="Neurofit Advance Physiotherapy Center offers expert physiotherapy for back pain, neck pain, sports injuries, paralysis & post-surgery rehab. 5000+ happy patients. Book now!">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
+
 <body>
 
+  <!-- ===== HOMEPAGE POPUP MODAL ===== -->
+  <div class="modal-overlay" id="homePopupModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closePopupModal" aria-label="Close popup"><i class="fas fa-times"></i></button>
+      <div class="modal-body" id="popupModalBody">
+        <!-- Content injected by JS -->
+      </div>
+    </div>
+  </div>
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="index.html" class="nav-logo">Neurofit <span>Physio</span></a>
+      <a href="index.html" class="nav-logo"><img src="logo.png" alt="Physio Logo" style="height: 40px; border-radius: 8px;"></a>
       <div class="nav-links" id="navLinks">
-        <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="blog.html">Blog</a>
-        <a href="reviews.html">Reviews</a>
+        <div class="nav-dropdown">
+          <a href="services.html">Conditions We Treat <i class="fas fa-chevron-down" style="font-size:0.8em"></i></a>
+          <div class="dropdown-menu">
+            <a href="service-detail.html?service=back-pain">Back Pain Treatment</a>
+            <a href="service-detail.html?service=neck-pain">Neck Pain Therapy</a>
+            <a href="service-detail.html?service=sports-injury">Sports Injury Rehab</a>
+            <a href="service-detail.html?service=paralysis">Paralysis Treatment</a>
+            <a href="service-detail.html?service=post-surgery">Post Surgery Rehab</a>
+            <a href="service-detail.html?service=pediatric">Pediatric Physiotherapy</a>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <a href="#">For Patients <i class="fas fa-chevron-down" style="font-size:0.8em"></i></a>
+          <div class="dropdown-menu">
+            <a href="reviews.html">Patient Reviews</a>
+            <a href="#">Knowledge Center</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </div>
+        <a href="offers.html">offers</a>
         <a href="contact.html">Contact</a>
-        <a href="appointment.html" class="btn btn-primary nav-cta">Book Now</a>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <a href="appointment.html" class="btn btn-primary nav-cta">Book Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="home">
+    <!-- Background Image Slider -->
+    <div class="hero-slider">
+      <div class="hero-slide active">
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1400&q=80"
+          alt="Physiotherapy treatment">
+      </div>
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1400&q=80"
+          alt="Physical therapy session">
+      </div>
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1598257006458-087169a1f08d?w=1400&q=80" alt="Sports rehabilitation">
+      </div>
+    </div>
+
     <div class="container hero-grid">
       <div class="hero-content">
-        <h1>Expert Physiotherapy Care for <span>Pain-Free Life</span></h1>
-        <p>At Neurofit Advance Physiotherapy Center, we combine advanced techniques with compassionate care to help you move better, feel stronger, and live without pain.</p>
+        <!-- Rotating Text Headlines -->
+        <div class="hero-text-slider" id="heroTextSlider">
+          <div class="hero-text-slide active">
+            <h1>Expert Physiotherapy for <span>Pain-Free Life</span></h1>
+          </div>
+          <div class="hero-text-slide">
+            <h1>Advanced <span>Neuro Rehabilitation</span> Care</h1>
+          </div>
+          <div class="hero-text-slide">
+            <h1>Sports Injury? Get <span>Back in Action</span></h1>
+          </div>
+        </div>
+        <p>At Neurofit Advance Physiotherapy Center, we combine advanced techniques with compassionate care to help you
+          move better, feel stronger, and live without pain.</p>
         <div class="hero-btns">
           <a href="appointment.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Appointment</a>
-          <a href="services.html" class="btn btn-outline" style="border-color:#fff;color:#fff"><i class="fas fa-stethoscope"></i> Our Services</a>
+          <a href="services.html" class="btn btn-outline" style="border-color:#fff;color:#fff"><i
+              class="fas fa-stethoscope"></i> Our Services</a>
+        </div>
+        <div class="hero-slide-indicators" id="heroIndicators">
+          <span class="active" data-slide="0"></span>
+          <span data-slide="1"></span>
+          <span data-slide="2"></span>
         </div>
         <div class="trust-bar">
-          <div class="trust-item"><div class="num" data-count="5000">0</div><div class="label">Happy Patients</div></div>
-          <div class="trust-item"><div class="num" data-count="10">0</div><div class="label">Years Experience</div></div>
-          <div class="trust-item"><div class="num" data-count="15">0</div><div class="label">Expert Therapies</div></div>
-          <div class="trust-item"><div class="num" data-count="98">0</div><div class="label">% Recovery Rate</div></div>
+          <div class="trust-item">
+            <div class="num" data-count="5000">0</div>
+            <div class="label">Happy Patients</div>
+          </div>
+          <div class="trust-item">
+            <div class="num" data-count="10">0</div>
+            <div class="label">Years Experience</div>
+          </div>
+          <div class="trust-item">
+            <div class="num" data-count="15">0</div>
+            <div class="label">Expert Therapies</div>
+          </div>
+          <div class="trust-item">
+            <div class="num" data-count="98">0</div>
+            <div class="label">% Recovery Rate</div>
+          </div>
         </div>
       </div>
       <div class="hero-visual">
         <div class="hero-img-wrapper">
-          <img src="https://cbphysiotherapy.in/storage/images/speciality/316x365/geriatric-physiotherapist.webp" alt="Physiotherapy treatment session">
+          <img src="https://cbphysiotherapy.in/storage/images/speciality/316x365/geriatric-physiotherapist.webp"
+            alt="Physiotherapy treatment session">
           <div class="hero-blob hero-blob-1"></div>
           <div class="hero-blob hero-blob-2"></div>
         </div>
@@ -70,25 +150,76 @@
     </div>
   </section>
 
+  <!-- ===== AI PRECISION RECOVERY ===== -->
+  <section class="ai-recovery" id="ai-recovery">
+    <div class="container">
+      <div class="section-title">
+        <h2>AI Precision Recovery</h2>
+        <p>Clinically guided, data-driven care for pain relief, functional recovery, and long-term everyday performance
+        </p>
+      </div>
+      <div class="ai-steps">
+        <div class="ai-step reveal">
+          <div class="ai-step-icon"><i class="fas fa-microscope"></i></div>
+          <div class="ai-step-connector"></div>
+          <h3>ASSESS <span>(Root-Cause)</span></h3>
+          <h4>AI + Physio Precision</h4>
+          <p>Our Physios uncover the root cause of your problem through advanced AI assessments – so treatments can
+            deliver long-lasting relief & improved function</p>
+        </div>
+        <div class="ai-step reveal">
+          <div class="ai-step-icon"><i class="fas fa-clipboard-list"></i></div>
+          <div class="ai-step-connector"></div>
+          <h3>PLAN <span>(Smart-Goals)</span></h3>
+          <h4>Personalized Recovery Map</h4>
+          <p>Your recovery roadmap aligned with your health needs is structured around SMART Goals & Milestones. You'll
+            know exactly what progress to expect, and when</p>
+        </div>
+        <div class="ai-step reveal">
+          <div class="ai-step-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="ai-step-connector"></div>
+          <h3>TRACK <span>(Progress)</span></h3>
+          <h4>Proof of Recovery</h4>
+          <p>A data-driven system that measures progress at every milestone—optimizing treatment and keeping you
+            motivated for the road ahead</p>
+        </div>
+        <div class="ai-step reveal">
+          <div class="ai-step-icon"><i class="fas fa-rocket"></i></div>
+          <h3>ADVANCE <span>(Recovery)</span></h3>
+          <h4>Care Beyond Clinic</h4>
+          <p>With guided exercise programs, adherence tracking and expert follow-ups, you can maintain progress, prevent
+            relapse and keep moving forward</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== ABOUT PREVIEW ===== -->
   <section class="about section" id="about">
     <div class="container">
-      <div class="section-title"><h2>About Us</h2><p>Committed to Your Recovery & Well-being</p></div>
+      <div class="section-title">
+        <h2>About Us</h2>
+        <p>Committed to Your Recovery & Well-being</p>
+      </div>
       <div class="about-grid">
         <div class="about-img reveal">
-          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&q=80" alt="Physiotherapy clinic interior">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&q=80"
+            alt="Physiotherapy clinic interior">
         </div>
         <div class="about-text reveal">
           <h3>Welcome to Neurofit Advance Physiotherapy Center</h3>
-          <p>With over a decade of excellence, we are a leading physiotherapy clinic dedicated to restoring mobility, relieving pain, and improving quality of life through evidence-based treatments.</p>
-          <p><strong>Our Mission:</strong> To provide accessible, world-class physiotherapy care using the latest technology and personalized treatment plans for every patient.</p>
+          <p>With over a decade of excellence, we are a leading physiotherapy clinic dedicated to restoring mobility,
+            relieving pain, and improving quality of life through evidence-based treatments.</p>
+          <p><strong>Our Mission:</strong> To provide accessible, world-class physiotherapy care using the latest
+            technology and personalized treatment plans for every patient.</p>
           <div class="about-features">
             <div class="about-feature"><i class="fas fa-check-circle"></i> Advanced Equipment</div>
             <div class="about-feature"><i class="fas fa-check-circle"></i> Certified Therapists</div>
             <div class="about-feature"><i class="fas fa-check-circle"></i> Personalized Care</div>
             <div class="about-feature"><i class="fas fa-check-circle"></i> Proven Results</div>
           </div>
-          <a href="about.html" class="btn btn-outline" style="margin-top:20px"><i class="fas fa-arrow-right"></i> Learn More About Us</a>
+          <a href="about.html" class="btn btn-outline" style="margin-top:20px"><i class="fas fa-arrow-right"></i> Learn
+            More About Us</a>
         </div>
       </div>
     </div>
@@ -97,7 +228,10 @@
   <!-- ===== SERVICES PREVIEW ===== -->
   <section class="section" id="services">
     <div class="container">
-      <div class="section-title"><h2>Our Services</h2><p>Comprehensive Physiotherapy Solutions for Every Need</p></div>
+      <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Comprehensive Physiotherapy Solutions for Every Need</p>
+      </div>
       <div class="services-grid">
         <div class="service-card reveal">
           <div class="service-icon"><i class="fas fa-bone"></i></div>
@@ -145,15 +279,21 @@
   <!-- ===== DOCTOR PREVIEW ===== -->
   <section class="doctor section" id="doctor">
     <div class="container">
-      <div class="section-title"><h2>Meet Our Doctor</h2><p>Expert Care from a Qualified Specialist</p></div>
+      <div class="section-title">
+        <h2>Meet Our Doctor</h2>
+        <p>Expert Care from a Qualified Specialist</p>
+      </div>
       <div class="doctor-card reveal">
         <div class="doctor-img">
-          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&q=80" alt="Dr. Neurofit - Lead Physiotherapist">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&q=80"
+            alt="Dr. Neurofit - Lead Physiotherapist">
         </div>
         <div class="doctor-info">
           <h3>Dr. Radhe Patel</h3>
           <span class="subtitle">BPT, MPT (Ortho) | Lead Physiotherapist</span>
-          <p>With 10+ years of clinical experience, Dr. Radhe Patel specializes in orthopedic and neurological physiotherapy. Known for a patient-first approach, combining advanced manual therapy with modern rehabilitation technology.</p>
+          <p>With 10+ years of clinical experience, Dr. Radhe Patel specializes in orthopedic and neurological
+            physiotherapy. Known for a patient-first approach, combining advanced manual therapy with modern
+            rehabilitation technology.</p>
           <div class="doc-details">
             <div class="doc-detail"><i class="fas fa-graduation-cap"></i> MPT – Orthopedics</div>
             <div class="doc-detail"><i class="fas fa-briefcase"></i> 10+ Years Experience</div>
@@ -171,83 +311,96 @@
   <!-- ===== TESTIMONIALS ===== -->
   <section class="section" id="testimonials">
     <div class="container">
-      <div class="section-title"><h2>Patient Reviews</h2><p>Hear What Our Patients Say About Us</p></div>
+      <div class="section-title">
+        <h2>Patient Reviews</h2>
+        <p>Hear What Our Patients Say About Us</p>
+      </div>
       <div class="testi-slider-wrapper">
         <div class="testi-track" id="testiTrack">
           <div class="testi-card">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p>"I had severe back pain for 2 years. After just 15 sessions at Neurofit, I feel like a new person. Highly recommended!"</p>
-            <div class="testi-author"><div class="testi-avatar"><i class="fas fa-user"></i></div><div><div class="testi-name">Rajesh Sharma</div><div class="testi-role">Back Pain Recovery</div></div></div>
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"I had severe back pain for 2 years. After just 15 sessions at Neurofit, I feel like a new person. Highly
+              recommended!"</p>
+            <div class="testi-author">
+              <div class="testi-avatar"><i class="fas fa-user"></i></div>
+              <div>
+                <div class="testi-name">Rajesh Sharma</div>
+                <div class="testi-role">Back Pain Recovery</div>
+              </div>
+            </div>
           </div>
           <div class="testi-card">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p>"Best physiotherapy center! Dr. is very professional and caring. My mother recovered well from paralysis treatment."</p>
-            <div class="testi-author"><div class="testi-avatar"><i class="fas fa-user"></i></div><div><div class="testi-name">Priya Mehta</div><div class="testi-role">Paralysis Treatment</div></div></div>
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"Best physiotherapy center! Dr. is very professional and caring. My mother recovered well from paralysis
+              treatment."</p>
+            <div class="testi-author">
+              <div class="testi-avatar"><i class="fas fa-user"></i></div>
+              <div>
+                <div class="testi-name">Priya Mehta</div>
+                <div class="testi-role">Paralysis Treatment</div>
+              </div>
+            </div>
           </div>
           <div class="testi-card">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p>"After my ACL surgery, Neurofit helped me get back on the football field in 4 months. Amazing rehab team!"</p>
-            <div class="testi-author"><div class="testi-avatar"><i class="fas fa-user"></i></div><div><div class="testi-name">Arjun Patel</div><div class="testi-role">Sports Injury Rehab</div></div></div>
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"After my ACL surgery, Neurofit helped me get back on the football field in 4 months. Amazing rehab
+              team!"</p>
+            <div class="testi-author">
+              <div class="testi-avatar"><i class="fas fa-user"></i></div>
+              <div>
+                <div class="testi-name">Arjun Patel</div>
+                <div class="testi-role">Sports Injury Rehab</div>
+              </div>
+            </div>
           </div>
           <div class="testi-card">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p>"The clinic is very clean and well-equipped. Staff is friendly and the treatment approach is very scientific."</p>
-            <div class="testi-author"><div class="testi-avatar"><i class="fas fa-user"></i></div><div><div class="testi-name">Sneha Joshi</div><div class="testi-role">Neck Pain Therapy</div></div></div>
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"The clinic is very clean and well-equipped. Staff is friendly and the treatment approach is very
+              scientific."</p>
+            <div class="testi-author">
+              <div class="testi-avatar"><i class="fas fa-user"></i></div>
+              <div>
+                <div class="testi-name">Sneha Joshi</div>
+                <div class="testi-role">Neck Pain Therapy</div>
+              </div>
+            </div>
           </div>
           <div class="testi-card">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p>"My child had delayed milestones. The pediatric physio sessions here made a wonderful difference. Very grateful!"</p>
-            <div class="testi-author"><div class="testi-avatar"><i class="fas fa-user"></i></div><div><div class="testi-name">Meena Desai</div><div class="testi-role">Pediatric Physiotherapy</div></div></div>
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"My child had delayed milestones. The pediatric physio sessions here made a wonderful difference. Very
+              grateful!"</p>
+            <div class="testi-author">
+              <div class="testi-avatar"><i class="fas fa-user"></i></div>
+              <div>
+                <div class="testi-name">Meena Desai</div>
+                <div class="testi-role">Pediatric Physiotherapy</div>
+              </div>
+            </div>
           </div>
           <div class="testi-card">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p>"Post knee replacement, I was struggling to walk. The rehab program at Neurofit was excellent. Walking freely now!"</p>
-            <div class="testi-author"><div class="testi-avatar"><i class="fas fa-user"></i></div><div><div class="testi-name">Vikram Singh</div><div class="testi-role">Post Surgery Rehab</div></div></div>
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"Post knee replacement, I was struggling to walk. The rehab program at Neurofit was excellent. Walking
+              freely now!"</p>
+            <div class="testi-author">
+              <div class="testi-avatar"><i class="fas fa-user"></i></div>
+              <div>
+                <div class="testi-name">Vikram Singh</div>
+                <div class="testi-role">Post Surgery Rehab</div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="testi-dots" id="testiDots"></div>
       </div>
       <div style="text-align:center;margin-top:24px">
-        <a href="reviews.html" class="btn btn-outline"><i class="fas fa-comments"></i> See All Reviews & Before/After</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== BLOG PREVIEW ===== -->
-  <section class="section" style="background:var(--off-white)">
-    <div class="container">
-      <div class="section-title"><h2>Health Blog</h2><p>Latest Tips & Insights for a Healthier Life</p></div>
-      <div class="blog-preview-grid">
-        <div class="blog-card reveal">
-          <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="Exercise Tips"></div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag">Exercise Guide</span>
-            <h3>5 Simple Exercises to Relieve Back Pain at Home</h3>
-            <p>Discover easy-to-do exercises that can help reduce chronic back pain without visiting a clinic.</p>
-            <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> May 1, 2026</span><span><i class="fas fa-clock"></i> 5 min read</span></div>
-          </div>
-        </div>
-        <div class="blog-card reveal">
-          <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80" alt="Physiotherapy Benefits"></div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag">Physiotherapy Tips</span>
-            <h3>Why Physiotherapy is Better Than Painkillers</h3>
-            <p>Learn why long-term physiotherapy treatment outperforms temporary pain medication solutions.</p>
-            <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> Apr 25, 2026</span><span><i class="fas fa-clock"></i> 4 min read</span></div>
-          </div>
-        </div>
-        <div class="blog-card reveal">
-          <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1598257006458-087169a1f08d?w=400&q=80" alt="Sports Recovery"></div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag">Sports Recovery</span>
-            <h3>How to Recover Faster After a Sports Injury</h3>
-            <p>Expert tips on speeding up recovery and preventing re-injury after sports-related trauma.</p>
-            <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> Apr 18, 2026</span><span><i class="fas fa-clock"></i> 6 min read</span></div>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:32px">
-        <a href="blog.html" class="btn btn-primary"><i class="fas fa-newspaper"></i> Read All Articles</a>
+        <a href="reviews.html" class="btn btn-outline"><i class="fas fa-comments"></i> See All Reviews &
+          Before/After</a>
       </div>
     </div>
   </section>
@@ -259,25 +412,95 @@
       <p>Book an online appointment or get expert guidance from the comfort of your home.</p>
       <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
         <a href="appointment.html" class="btn btn-white"><i class="fas fa-calendar-check"></i> Book Appointment</a>
-        <a href="contact.html" class="btn btn-outline" style="border-color:#fff;color:#fff"><i class="fas fa-video"></i> Online Guidance</a>
+        <a href="contact.html" class="btn btn-outline" style="border-color:#fff;color:#fff"><i class="fas fa-video"></i>
+          Online Guidance</a>
       </div>
     </div>
   </section>
 
+  <!-- ===== BLOG PREVIEW ===== -->
+  <section class="section" style="background:var(--off-white)">
+    <div class="container">
+      <div class="section-title">
+        <h2>Health Blog</h2>
+        <p>Latest Tips & Insights for a Healthier Life</p>
+      </div>
+      <div class="blog-preview-grid">
+        <div class="blog-card reveal">
+          <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80"
+              alt="Exercise Tips"></div>
+          <div class="blog-card-body">
+            <span class="blog-card-tag">Exercise Guide</span>
+            <h3>5 Simple Exercises to Relieve Back Pain at Home</h3>
+            <p>Discover easy-to-do exercises that can help reduce chronic back pain without visiting a clinic.</p>
+            <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> May 1, 2026</span><span><i
+                  class="fas fa-clock"></i> 5 min read</span></div>
+          </div>
+        </div>
+        <div class="blog-card reveal">
+          <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80"
+              alt="Physiotherapy Benefits"></div>
+          <div class="blog-card-body">
+            <span class="blog-card-tag">Physiotherapy Tips</span>
+            <h3>Why Physiotherapy is Better Than Painkillers</h3>
+            <p>Learn why long-term physiotherapy treatment outperforms temporary pain medication solutions.</p>
+            <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> Apr 25, 2026</span><span><i
+                  class="fas fa-clock"></i> 4 min read</span></div>
+          </div>
+        </div>
+        <div class="blog-card reveal">
+          <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1598257006458-087169a1f08d?w=400&q=80"
+              alt="Sports Recovery"></div>
+          <div class="blog-card-body">
+            <span class="blog-card-tag">Sports Recovery</span>
+            <h3>How to Recover Faster After a Sports Injury</h3>
+            <p>Expert tips on speeding up recovery and preventing re-injury after sports-related trauma.</p>
+            <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> Apr 18, 2026</span><span><i
+                  class="fas fa-clock"></i> 6 min read</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:32px">
+        <a href="blog.html" class="btn btn-primary"><i class="fas fa-newspaper"></i> Read All Articles</a>
+      </div>
+    </div>
+  </section>
+
+
+
   <!-- ===== APPOINTMENT PREVIEW ===== -->
   <section class="appointment section" id="appointment">
     <div class="container">
-      <div class="appt-grid">
-        <div class="appt-text reveal">
+      <div class="appt-wrapper reveal">
+        <div class="appt-info">
           <h2>Book Your Appointment Today</h2>
-          <p>Take the first step towards a pain-free life. Fill out the form and our team will get back to you within 24 hours.</p>
-          <div style="display:flex;flex-direction:column;gap:16px;margin-top:24px">
-            <div style="display:flex;align-items:center;gap:12px"><i class="fas fa-clock" style="font-size:1.2rem;opacity:.8"></i> Mon – Sat: 9:00 AM – 8:00 PM</div>
-            <div style="display:flex;align-items:center;gap:12px"><i class="fas fa-phone" style="font-size:1.2rem;opacity:.8"></i> +91 98765 43210</div>
-            <div style="display:flex;align-items:center;gap:12px"><i class="fas fa-map-marker-alt" style="font-size:1.2rem;opacity:.8"></i> Main Road, City Center, Gujarat, India</div>
+          <p>Take the first step towards a pain-free life. Fill out the form and our team will get back to you within 24
+            hours.</p>
+          <div class="appt-contact-list">
+            <div class="appt-contact-item">
+              <div class="icon-box"><i class="fas fa-clock"></i></div>
+              <div class="text-box">
+                <strong>Working Hours</strong>
+                <span>Mon – Sat: 9:00 AM – 8:00 PM</span>
+              </div>
+            </div>
+            <div class="appt-contact-item">
+              <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+              <div class="text-box">
+                <strong>Call Us Now</strong>
+                <span>+91 90239 31863</span>
+              </div>
+            </div>
+            <div class="appt-contact-item">
+              <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="text-box">
+                <strong>Our Location</strong>
+                <span>Main Road, City Center, Gujarat, India</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="appt-form reveal">
+        <div class="appt-form">
           <h3>📋 Quick Appointment</h3>
           <form id="appointmentForm">
             <div class="form-group"><input type="text" placeholder="Full Name *" required id="apptName"></div>
@@ -296,7 +519,8 @@
               </select>
             </div>
             <div class="form-group"><input type="date" id="apptDate" required></div>
-            <div class="form-group"><textarea placeholder="Describe your condition (optional)" id="apptMsg"></textarea></div>
+            <div class="form-group"><textarea placeholder="Describe your condition (optional)" id="apptMsg"></textarea>
+            </div>
             <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Submit Appointment</button>
           </form>
         </div>
@@ -310,7 +534,8 @@
       <div class="footer-grid">
         <div class="footer-about">
           <h3>Neurofit <span>Physio</span></h3>
-          <p>Neurofit Advance Physiotherapy Center is a trusted physiotherapy clinic offering evidence-based treatments for pain relief, injury recovery, and rehabilitation.</p>
+          <p>Neurofit Advance Physiotherapy Center is a trusted physiotherapy clinic offering evidence-based treatments
+            for pain relief, injury recovery, and rehabilitation.</p>
           <div class="footer-socials">
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -341,8 +566,9 @@
         <div class="footer-col">
           <h4>Contact Info</h4>
           <ul>
-            <li><a href="tel:+919876543210"><i class="fas fa-phone-alt"></i> +91 98765 43210</a></li>
-            <li><a href="mailto:info@neurofitphysio.com"><i class="fas fa-envelope"></i> info@neurofitphysio.com</a></li>
+            <li><a href="tel:+919023931863"><i class="fas fa-phone-alt"></i> +91 90239 31863</a></li>
+            <li><a href="mailto:info@neurofitphysio.com"><i class="fas fa-envelope"></i> info@neurofitphysio.com</a>
+            </li>
             <li><a href="contact.html"><i class="fas fa-map-marker-alt"></i> Gujarat, India</a></li>
           </ul>
         </div>
@@ -353,10 +579,43 @@
     </div>
   </footer>
 
-  <!-- ===== FLOATING ===== -->
-  <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp" id="whatsappBtn"><i class="fab fa-whatsapp"></i></a>
+  <!-- ===== WHATSAPP WIDGET ===== -->
+  <div class="wa-widget-container">
+    <div class="wa-widget-box active" id="waWidgetBox">
+      <div class="wa-widget-header">
+        <i class="fab fa-whatsapp"></i>
+        <div>
+          <h4>Neurofit Physio</h4>
+          <p>We typically reply in minutes.</p>
+        </div>
+      </div>
+      <div class="wa-widget-body">
+        <a href="https://wa.me/919023931863?text=Hello,%20I%20want%20to%20book%20an%20appointment" target="_blank" class="wa-agent">
+          <div class="wa-agent-avatar"><i class="fas fa-user-md"></i></div>
+          <div class="wa-agent-info">
+            <strong>Book Appointment</strong>
+            <span><span class="online-dot"></span> Online</span>
+          </div>
+          <div class="wa-btn-sm"><i class="fab fa-whatsapp"></i> WhatsApp</div>
+        </a>
+        <a href="https://wa.me/919023931863?text=Hello,%20I%20need%20help/support" target="_blank" class="wa-agent">
+          <div class="wa-agent-avatar" style="background:#e8f5e9;color:#2e7d32"><i class="fas fa-headset"></i></div>
+          <div class="wa-agent-info">
+            <strong>Help Desk</strong>
+            <span><span class="online-dot"></span> Online</span>
+          </div>
+          <div class="wa-btn-sm"><i class="fab fa-whatsapp"></i> WhatsApp</div>
+        </a>
+      </div>
+    </div>
+    <button class="wa-widget-toggle active" id="waWidgetToggle" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <i class="fas fa-times close-icon"></i>
+    </button>
+  </div>
   <a href="#home" class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></a>
 
   <script src="script.js"></script>
 </body>
+
 </html>

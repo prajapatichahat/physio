@@ -1,25 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Our Doctor | Neurofit Advance Physiotherapy Center</title>
-  <meta name="description" content="Meet Dr. Radhe Patel - Lead Physiotherapist at Neurofit with 10+ years of experience in orthopedic and neurological physiotherapy.">
+  <meta name="description"
+    content="Meet Dr. Radhe Patel - Lead Physiotherapist at Neurofit with 10+ years of experience in orthopedic and neurological physiotherapy.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="pages.css">
 </head>
+
 <body>
   <nav class="navbar scrolled" id="navbar">
     <div class="container">
       <a href="index.html" class="nav-logo">Neurofit <span>Physio</span></a>
       <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a><a href="about.html" class="active">About</a><a href="services.html">Services</a><a href="blog.html">Blog</a><a href="reviews.html">Reviews</a><a href="contact.html">Contact</a>
-        <a href="appointment.html" class="btn btn-primary nav-cta">Book Now</a>
+        <a href="about.html">About</a>
+        <div class="nav-dropdown">
+          <a href="services.html">Conditions We Treat <i class="fas fa-chevron-down" style="font-size:0.8em"></i></a>
+          <div class="dropdown-menu">
+            <a href="service-detail.html?service=back-pain">Back Pain Treatment</a>
+            <a href="service-detail.html?service=neck-pain">Neck Pain Therapy</a>
+            <a href="service-detail.html?service=sports-injury">Sports Injury Rehab</a>
+            <a href="service-detail.html?service=paralysis">Paralysis Treatment</a>
+            <a href="service-detail.html?service=post-surgery">Post Surgery Rehab</a>
+            <a href="service-detail.html?service=pediatric">Pediatric Physiotherapy</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#">For Patients <i class="fas fa-chevron-down" style="font-size:0.8em"></i></a>
+          <div class="dropdown-menu">
+            <a href="reviews.html">Patient Reviews</a>
+            <a href="#">Knowledge Center</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </div>
+        <a href="offers.html">Offers</a>
+        <a href="contact.html">Contact</a>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <div class="nav-right">
+        <a href="appointment.html" class="btn btn-primary nav-cta">Book Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -40,10 +70,16 @@
       <div class="about-hero-text reveal">
         <span class="subtitle">Lead Physiotherapist</span>
         <h2>Dr. Radhe Patel</h2>
-        <p style="color:var(--accent);font-weight:600;margin-bottom:16px">BPT, MPT (Orthopedics) | Certified Manual Therapist</p>
-        <p>With over a decade of clinical excellence, Dr. Radhe Patel is the founder and lead physiotherapist at Neurofit Advance Physiotherapy Center. Known for a patient-first approach, Dr. Patel combines advanced manual therapy techniques with cutting-edge rehabilitation technology to deliver exceptional outcomes.</p>
-        <p>Specializing in orthopedic and neurological physiotherapy, Dr. Patel has successfully treated over 5,000 patients, helping them regain mobility, overcome pain, and return to their active lifestyles. His expertise spans from complex post-surgical rehabilitation to sports injury management and neurological recovery.</p>
-        <p>"My philosophy is simple — every patient deserves personalized, evidence-based care that addresses the root cause of their condition, not just the symptoms."</p>
+        <p style="color:var(--accent);font-weight:600;margin-bottom:16px">BPT, MPT (Orthopedics) | Certified Manual
+          Therapist</p>
+        <p>With over a decade of clinical excellence, Dr. Radhe Patel is the founder and lead physiotherapist at
+          Neurofit Advance Physiotherapy Center. Known for a patient-first approach, Dr. Patel combines advanced manual
+          therapy techniques with cutting-edge rehabilitation technology to deliver exceptional outcomes.</p>
+        <p>Specializing in orthopedic and neurological physiotherapy, Dr. Patel has successfully treated over 5,000
+          patients, helping them regain mobility, overcome pain, and return to their active lifestyles. His expertise
+          spans from complex post-surgical rehabilitation to sports injury management and neurological recovery.</p>
+        <p>"My philosophy is simple — every patient deserves personalized, evidence-based care that addresses the root
+          cause of their condition, not just the symptoms."</p>
         <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap">
           <a href="appointment.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Consultation</a>
           <a href="contact.html" class="btn btn-outline"><i class="fas fa-video"></i> Online Guidance</a>
@@ -55,17 +91,32 @@
   <!-- Stats -->
   <section style="background:var(--off-white);padding:40px 0">
     <div class="container about-stats">
-      <div class="about-stat reveal"><div class="num" data-count="5000">0</div><div class="label">Patients Treated</div></div>
-      <div class="about-stat reveal"><div class="num" data-count="10">0</div><div class="label">Years Experience</div></div>
-      <div class="about-stat reveal"><div class="num" data-count="15">0</div><div class="label">Specializations</div></div>
-      <div class="about-stat reveal"><div class="num" data-count="98">0</div><div class="label">% Recovery Rate</div></div>
+      <div class="about-stat reveal">
+        <div class="num" data-count="5000">0</div>
+        <div class="label">Patients Treated</div>
+      </div>
+      <div class="about-stat reveal">
+        <div class="num" data-count="10">0</div>
+        <div class="label">Years Experience</div>
+      </div>
+      <div class="about-stat reveal">
+        <div class="num" data-count="15">0</div>
+        <div class="label">Specializations</div>
+      </div>
+      <div class="about-stat reveal">
+        <div class="num" data-count="98">0</div>
+        <div class="label">% Recovery Rate</div>
+      </div>
     </div>
   </section>
 
   <!-- Education & Certifications Timeline -->
   <section class="timeline-section">
     <div class="container">
-      <div class="section-title"><h2>Education & Certifications</h2><p>A Journey of Continuous Learning & Excellence</p></div>
+      <div class="section-title">
+        <h2>Education & Certifications</h2>
+        <p>A Journey of Continuous Learning & Excellence</p>
+      </div>
       <div class="timeline">
         <div class="timeline-item reveal">
           <span class="year">2012</span>
@@ -75,32 +126,38 @@
         <div class="timeline-item reveal">
           <span class="year">2014</span>
           <h4>Master of Physiotherapy – Orthopedics (MPT)</h4>
-          <p>Advanced studies in orthopedic physiotherapy including manual therapy, joint mobilization, and sports rehabilitation.</p>
+          <p>Advanced studies in orthopedic physiotherapy including manual therapy, joint mobilization, and sports
+            rehabilitation.</p>
         </div>
         <div class="timeline-item reveal">
           <span class="year">2015</span>
           <h4>Certified Manual Therapist (CMT)</h4>
-          <p>Specialized certification in advanced manual therapy techniques including Maitland concept and Mulligan techniques.</p>
+          <p>Specialized certification in advanced manual therapy techniques including Maitland concept and Mulligan
+            techniques.</p>
         </div>
         <div class="timeline-item reveal">
           <span class="year">2017</span>
           <h4>Dry Needling Certification</h4>
-          <p>Advanced training in trigger point dry needling for myofascial pain management and chronic pain conditions.</p>
+          <p>Advanced training in trigger point dry needling for myofascial pain management and chronic pain conditions.
+          </p>
         </div>
         <div class="timeline-item reveal">
           <span class="year">2019</span>
           <h4>Sports Rehabilitation Specialist</h4>
-          <p>Specialized training in sports injury management, ACL rehabilitation protocols, and athletic performance optimization.</p>
+          <p>Specialized training in sports injury management, ACL rehabilitation protocols, and athletic performance
+            optimization.</p>
         </div>
         <div class="timeline-item reveal">
           <span class="year">2021</span>
           <h4>Neurological Rehabilitation Expert</h4>
-          <p>Advanced certification in Bobath concept and PNF techniques for stroke and neurological condition rehabilitation.</p>
+          <p>Advanced certification in Bobath concept and PNF techniques for stroke and neurological condition
+            rehabilitation.</p>
         </div>
         <div class="timeline-item reveal">
           <span class="year">2023</span>
           <h4>Founded Neurofit Advance Physiotherapy Center</h4>
-          <p>Established a state-of-the-art physiotherapy center equipped with advanced rehabilitation technology and patient-centric care model.</p>
+          <p>Established a state-of-the-art physiotherapy center equipped with advanced rehabilitation technology and
+            patient-centric care model.</p>
         </div>
       </div>
     </div>
@@ -109,7 +166,10 @@
   <!-- Expertise Areas -->
   <section class="section" style="background:var(--off-white)">
     <div class="container">
-      <div class="section-title"><h2>Areas of Expertise</h2><p>Specialized Knowledge Across Multiple Domains</p></div>
+      <div class="section-title">
+        <h2>Areas of Expertise</h2>
+        <p>Specialized Knowledge Across Multiple Domains</p>
+      </div>
       <div class="services-grid">
         <div class="service-card reveal">
           <div class="service-icon"><i class="fas fa-bone"></i></div>
@@ -151,15 +211,18 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <h3>Our Treatment Philosophy</h3>
-          <p>At Neurofit, we believe in treating the whole person, not just the symptom. Our approach is built on three pillars:</p>
+          <p>At Neurofit, we believe in treating the whole person, not just the symptom. Our approach is built on three
+            pillars:</p>
           <div class="about-features" style="margin-top:20px">
             <div class="about-feature"><i class="fas fa-search"></i> Root Cause Analysis</div>
             <div class="about-feature"><i class="fas fa-user-cog"></i> Personalized Treatment</div>
             <div class="about-feature"><i class="fas fa-chart-line"></i> Measurable Progress</div>
             <div class="about-feature"><i class="fas fa-shield-alt"></i> Long-term Prevention</div>
           </div>
-          <p style="margin-top:16px">We use the latest evidence-based techniques combined with advanced rehabilitation technology to deliver the best possible outcomes for every patient.</p>
-          <a href="appointment.html" class="btn btn-primary" style="margin-top:20px"><i class="fas fa-calendar-check"></i> Book a Consultation</a>
+          <p style="margin-top:16px">We use the latest evidence-based techniques combined with advanced rehabilitation
+            technology to deliver the best possible outcomes for every patient.</p>
+          <a href="appointment.html" class="btn btn-primary" style="margin-top:20px"><i
+              class="fas fa-calendar-check"></i> Book a Consultation</a>
         </div>
         <div class="about-img reveal">
           <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="Treatment philosophy">
@@ -179,18 +242,52 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-about"><h3>Neurofit <span>Physio</span></h3><p>Trusted physiotherapy clinic offering evidence-based treatments.</p>
-          <div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+        <div class="footer-about">
+          <h3>Neurofit <span>Physio</span></h3>
+          <p>Trusted physiotherapy clinic offering evidence-based treatments.</p>
+          <div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
+                class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i
+                class="fab fa-linkedin-in"></i></a></div>
         </div>
-        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div class="footer-col"><h4>Services</h4><ul><li><a href="service-detail.html?service=back-pain">Back Pain</a></li><li><a href="service-detail.html?service=neck-pain">Neck Pain</a></li><li><a href="service-detail.html?service=sports-injury">Sports Injury</a></li><li><a href="service-detail.html?service=paralysis">Paralysis</a></li></ul></div>
-        <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+919876543210"><i class="fas fa-phone-alt"></i> +91 98765 43210</a></li><li><a href="mailto:info@neurofitphysio.com"><i class="fas fa-envelope"></i> info@neurofitphysio.com</a></li></ul></div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="offers.html">Offers</a>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="service-detail.html?service=back-pain">Back Pain</a></li>
+            <li><a href="service-detail.html?service=neck-pain">Neck Pain</a></li>
+            <li><a href="service-detail.html?service=sports-injury">Sports Injury</a></li>
+            <li><a href="service-detail.html?service=paralysis">Paralysis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+919023931863"><i class="fas fa-phone-alt"></i> +91 90239 31863</a></li>
+            <li><a href="mailto:info@neurofitphysio.com"><i class="fas fa-envelope"></i> info@neurofitphysio.com</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-bottom"><p>&copy; 2026 Neurofit Advance Physiotherapy Center. All Rights Reserved.</p></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Neurofit Advance Physiotherapy Center. All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
-  <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float" id="whatsappBtn"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://wa.me/919023931863" target="_blank" class="whatsapp-float" id="whatsappBtn"><i
+      class="fab fa-whatsapp"></i></a>
   <a href="#" class="back-top" id="backTop"><i class="fas fa-chevron-up"></i></a>
   <script src="script.js"></script>
 </body>
+
 </html>

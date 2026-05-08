@@ -34,7 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', (e) => {
+        // If clicking a dropdown toggle, don't close the menu
+        if (link.nextElementSibling && link.nextElementSibling.classList.contains('dropdown-menu')) {
+          e.preventDefault();
+          if (window.innerWidth <= 768) {
+            link.parentElement.classList.toggle('active');
+          }
+          return;
+        }
         navLinks.classList.remove('open');
         const spans = hamburger.querySelectorAll('span');
         spans[0].style.transform = '';
@@ -70,6 +78,34 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', animateCounters);
   animateCounters();
 
+  // ===== HERO SLIDER =====
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  const heroTextSlides = document.querySelectorAll('.hero-text-slide');
+  const heroIndicators = document.querySelectorAll('#heroIndicators span');
+  if (heroSlides.length > 1) {
+    let currentHeroSlide = 0;
+    function goToHeroSlide(index) {
+      heroSlides.forEach(s => s.classList.remove('active'));
+      heroTextSlides.forEach(s => s.classList.remove('active'));
+      heroIndicators.forEach(s => s.classList.remove('active'));
+      currentHeroSlide = index % heroSlides.length;
+      heroSlides[currentHeroSlide].classList.add('active');
+      if (heroTextSlides[currentHeroSlide]) heroTextSlides[currentHeroSlide].classList.add('active');
+      if (heroIndicators[currentHeroSlide]) heroIndicators[currentHeroSlide].classList.add('active');
+    }
+    heroIndicators.forEach(dot => {
+      dot.addEventListener('click', () => goToHeroSlide(+dot.dataset.slide));
+    });
+    let heroAuto = setInterval(() => goToHeroSlide(currentHeroSlide + 1), 4000);
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+      heroSection.addEventListener('mouseenter', () => clearInterval(heroAuto));
+      heroSection.addEventListener('mouseleave', () => {
+        heroAuto = setInterval(() => goToHeroSlide(currentHeroSlide + 1), 4000);
+      });
+    }
+  }
+
   // ===== SCROLL REVEAL =====
   const reveals = document.querySelectorAll('.reveal');
   function revealOnScroll() {
@@ -102,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const date = document.getElementById('apptDate').value;
       const msg = document.getElementById('apptMsg').value;
       const text = `Hello Neurofit Physio!%0A%0A*New Appointment Request*%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0ADate: ${date}%0AMessage: ${msg || 'N/A'}`;
-      window.open(`https://wa.me/919876543210?text=${text}`, '_blank');
+      window.open(`https://wa.me/919023931863?text=${text}`, '_blank');
       const btn = form.querySelector('button[type="submit"]');
       const original = btn.innerHTML;
       btn.innerHTML = '<i class="fas fa-check"></i> Sent via WhatsApp!';
@@ -157,4 +193,79 @@ document.addEventListener('DOMContentLoaded', () => {
     const today = new Date().toISOString().split('T')[0];
     input.setAttribute('min', today);
   });
+
+  // ===== HOMEPAGE POPUP MODAL =====
+  const homePopupModal = document.getElementById('homePopupModal');
+  const closePopupModal = document.getElementById('closePopupModal');
+  const popupModalBody = document.getElementById('popupModalBody');
+
+  if (homePopupModal && popupModalBody) {
+    // Configuration for popup content
+    const popupConfig = {
+      hasOffer: true, // Toggle this to true to show Offer, false to show Event
+      offer: {
+        image: "physio_offer_banner.png",
+        link: "offers.html",
+        alt: "Special Weekend Offer - Free OPD Checkup!"
+      },
+      event: {
+        image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=80",
+        link: "appointment.html",
+        alt: "Upcoming Health Camp"
+      }
+    };
+
+    // Show popup every time the page loads
+    setTimeout(() => {
+      let contentHTML = "";
+
+      if (popupConfig.hasOffer) {
+        contentHTML = `
+          <a href="${popupConfig.offer.link}">
+            <img src="${popupConfig.offer.image}" alt="${popupConfig.offer.alt}" class="popup-img">
+          </a>
+        `;
+      } else {
+        contentHTML = `
+          <a href="${popupConfig.event.link}">
+            <img src="${popupConfig.event.image}" alt="${popupConfig.event.alt}" class="popup-img">
+          </a>
+        `;
+      }
+
+      popupModalBody.innerHTML = contentHTML;
+      homePopupModal.classList.add('active');
+    }, 1000); // 1.5 seconds delay before popup shows
+    // Close functionality
+    if (closePopupModal) {
+      closePopupModal.addEventListener('click', () => {
+        homePopupModal.classList.remove('active');
+      });
+    }
+
+    // Close on clicking outside
+    homePopupModal.addEventListener('click', (e) => {
+      if (e.target === homePopupModal) {
+        homePopupModal.classList.remove('active');
+      }
+    });
+  }
+
+  // ===== WHATSAPP WIDGET TOGGLE =====
+  const waWidgetToggle = document.getElementById('waWidgetToggle');
+  const waWidgetBox = document.getElementById('waWidgetBox');
+  if (waWidgetToggle && waWidgetBox) {
+    waWidgetToggle.addEventListener('click', () => {
+      waWidgetBox.classList.toggle('active');
+      waWidgetToggle.classList.toggle('active');
+    });
+
+    // Close WA widget when clicking outside
+    // document.addEventListener('click', (e) => {
+    //   if (!waWidgetToggle.contains(e.target) && !waWidgetBox.contains(e.target) && waWidgetBox.classList.contains('active')) {
+    //     waWidgetBox.classList.remove('active');
+    //     waWidgetToggle.classList.remove('active');
+    //   }
+    // });
+  }
 });

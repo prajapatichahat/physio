@@ -1,25 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Health Blog | Neurofit Advance Physiotherapy Center</title>
-  <meta name="description" content="Read expert physiotherapy tips, recovery guides, and health insights from Neurofit Advance Physiotherapy Center.">
+  <meta name="description"
+    content="Read expert physiotherapy tips, recovery guides, and health insights from Neurofit Advance Physiotherapy Center.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="pages.css">
 </head>
+
 <body>
   <nav class="navbar scrolled" id="navbar">
     <div class="container">
       <a href="index.html" class="nav-logo">Neurofit <span>Physio</span></a>
       <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="blog.html" class="active">Blog</a><a href="reviews.html">Reviews</a><a href="contact.html">Contact</a>
-        <a href="appointment.html" class="btn btn-primary nav-cta">Book Now</a>
+        <a href="about.html">About</a>
+        <div class="nav-dropdown">
+          <a href="services.html">Conditions We Treat <i class="fas fa-chevron-down" style="font-size:0.8em"></i></a>
+          <div class="dropdown-menu">
+            <a href="service-detail.html?service=back-pain">Back Pain Treatment</a>
+            <a href="service-detail.html?service=neck-pain">Neck Pain Therapy</a>
+            <a href="service-detail.html?service=sports-injury">Sports Injury Rehab</a>
+            <a href="service-detail.html?service=paralysis">Paralysis Treatment</a>
+            <a href="service-detail.html?service=post-surgery">Post Surgery Rehab</a>
+            <a href="service-detail.html?service=pediatric">Pediatric Physiotherapy</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#">For Patients <i class="fas fa-chevron-down" style="font-size:0.8em"></i></a>
+          <div class="dropdown-menu">
+            <a href="reviews.html">Patient Reviews</a>
+            <a href="#">Knowledge Center</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </div>
+        <a href="offers.html">Offers</a>
+        <a href="contact.html">Contact</a>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <div class="nav-right">
+        <a href="appointment.html" class="btn btn-primary nav-cta">Book Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -37,12 +67,16 @@
         <!-- Featured Post -->
         <div class="bp-featured">
           <div class="bp-card reveal">
-            <div class="bp-card-img"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80" alt="Back Pain Exercises"></div>
+            <div class="bp-card-img"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"
+                alt="Back Pain Exercises"></div>
             <div class="bp-card-body">
               <span class="blog-card-tag">Featured</span>
-              <h3><a href="blog-detail.html?post=back-pain-exercises">5 Simple Exercises to Relieve Back Pain at Home</a></h3>
-              <p>Discover easy-to-do exercises that can help reduce chronic back pain without visiting a clinic. These proven techniques can be done in just 15 minutes a day for lasting relief.</p>
-              <div class="blog-card-meta"><span><i class="fas fa-user"></i> Dr. Radhe Patel</span><span><i class="fas fa-calendar"></i> May 1, 2026</span><span><i class="fas fa-clock"></i> 5 min</span></div>
+              <h3><a href="blog-detail.html?post=back-pain-exercises">5 Simple Exercises to Relieve Back Pain at
+                  Home</a></h3>
+              <p>Discover easy-to-do exercises that can help reduce chronic back pain without visiting a clinic. These
+                proven techniques can be done in just 15 minutes a day for lasting relief.</p>
+              <div class="blog-card-meta"><span><i class="fas fa-user"></i> Dr. Radhe Patel</span><span><i
+                    class="fas fa-calendar"></i> May 1, 2026</span><span><i class="fas fa-clock"></i> 5 min</span></div>
             </div>
           </div>
         </div>
@@ -50,48 +84,67 @@
         <!-- Blog List -->
         <div class="blog-list">
           <div class="bp-card reveal">
-            <div class="bp-card-img"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80" alt="Physiotherapy vs Painkillers"></div>
+            <div class="bp-card-img"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80"
+                alt="Physiotherapy vs Painkillers"></div>
             <div class="bp-card-body">
               <span class="blog-card-tag">Physiotherapy Tips</span>
-              <h3><a href="blog-detail.html?post=physio-vs-painkillers">Why Physiotherapy is Better Than Painkillers</a></h3>
-              <p>Learn why long-term physiotherapy treatment outperforms temporary pain medication solutions and helps achieve lasting recovery.</p>
-              <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> Apr 25, 2026</span><span><i class="fas fa-clock"></i> 4 min</span></div>
+              <h3><a href="blog-detail.html?post=physio-vs-painkillers">Why Physiotherapy is Better Than Painkillers</a>
+              </h3>
+              <p>Learn why long-term physiotherapy treatment outperforms temporary pain medication solutions and helps
+                achieve lasting recovery.</p>
+              <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> Apr 25, 2026</span><span><i
+                    class="fas fa-clock"></i> 4 min</span></div>
             </div>
           </div>
           <div class="bp-card reveal">
-            <div class="bp-card-img"><img src="https://images.unsplash.com/photo-1598257006458-087169a1f08d?w=400&q=80" alt="Sports Injury Recovery"></div>
+            <div class="bp-card-img"><img src="https://images.unsplash.com/photo-1598257006458-087169a1f08d?w=400&q=80"
+                alt="Sports Injury Recovery"></div>
             <div class="bp-card-body">
               <span class="blog-card-tag">Sports Recovery</span>
-              <h3><a href="blog-detail.html?post=sports-injury-recovery">How to Recover Faster After a Sports Injury</a></h3>
-              <p>Expert tips on speeding up recovery and preventing re-injury after sports-related trauma. Learn the RICE method and beyond.</p>
-              <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> Apr 18, 2026</span><span><i class="fas fa-clock"></i> 6 min</span></div>
+              <h3><a href="blog-detail.html?post=sports-injury-recovery">How to Recover Faster After a Sports Injury</a>
+              </h3>
+              <p>Expert tips on speeding up recovery and preventing re-injury after sports-related trauma. Learn the
+                RICE method and beyond.</p>
+              <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> Apr 18, 2026</span><span><i
+                    class="fas fa-clock"></i> 6 min</span></div>
             </div>
           </div>
           <div class="bp-card reveal">
-            <div class="bp-card-img"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&q=80" alt="Neck Pain"></div>
+            <div class="bp-card-img"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&q=80"
+                alt="Neck Pain"></div>
             <div class="bp-card-body">
               <span class="blog-card-tag">Health & Wellness</span>
               <h3><a href="blog-detail.html?post=neck-pain-desk">Desk Job? Here's How to Prevent Neck Pain</a></h3>
-              <p>If you work at a desk all day, you're at high risk for neck pain. Learn ergonomic tips and stretches to keep your neck healthy.</p>
-              <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> Apr 10, 2026</span><span><i class="fas fa-clock"></i> 4 min</span></div>
+              <p>If you work at a desk all day, you're at high risk for neck pain. Learn ergonomic tips and stretches to
+                keep your neck healthy.</p>
+              <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> Apr 10, 2026</span><span><i
+                    class="fas fa-clock"></i> 4 min</span></div>
             </div>
           </div>
           <div class="bp-card reveal">
-            <div class="bp-card-img"><img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=400&q=80" alt="Post Surgery"></div>
+            <div class="bp-card-img"><img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=400&q=80"
+                alt="Post Surgery"></div>
             <div class="bp-card-body">
               <span class="blog-card-tag">Recovery Stories</span>
-              <h3><a href="blog-detail.html?post=post-surgery-rehab">What to Expect After Knee Replacement Surgery</a></h3>
-              <p>A complete guide to recovery after knee replacement including timeline, exercises, and tips for faster healing.</p>
-              <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> Apr 3, 2026</span><span><i class="fas fa-clock"></i> 7 min</span></div>
+              <h3><a href="blog-detail.html?post=post-surgery-rehab">What to Expect After Knee Replacement Surgery</a>
+              </h3>
+              <p>A complete guide to recovery after knee replacement including timeline, exercises, and tips for faster
+                healing.</p>
+              <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> Apr 3, 2026</span><span><i
+                    class="fas fa-clock"></i> 7 min</span></div>
             </div>
           </div>
           <div class="bp-card reveal">
-            <div class="bp-card-img"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&q=80" alt="Pediatric Physio"></div>
+            <div class="bp-card-img"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&q=80"
+                alt="Pediatric Physio"></div>
             <div class="bp-card-body">
               <span class="blog-card-tag">Pediatric Care</span>
-              <h3><a href="blog-detail.html?post=pediatric-milestones">When Should You Take Your Child to a Physiotherapist?</a></h3>
-              <p>Signs that your child may benefit from pediatric physiotherapy and how early intervention makes a difference.</p>
-              <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> Mar 26, 2026</span><span><i class="fas fa-clock"></i> 5 min</span></div>
+              <h3><a href="blog-detail.html?post=pediatric-milestones">When Should You Take Your Child to a
+                  Physiotherapist?</a></h3>
+              <p>Signs that your child may benefit from pediatric physiotherapy and how early intervention makes a
+                difference.</p>
+              <div class="blog-card-meta"><span><i class="fas fa-calendar"></i> Mar 26, 2026</span><span><i
+                    class="fas fa-clock"></i> 5 min</span></div>
             </div>
           </div>
         </div>
@@ -111,15 +164,18 @@
         <div class="blog-sidebar-card">
           <h4>🏷️ Popular Tags</h4>
           <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
-            <span class="blog-card-tag">Back Pain</span><span class="blog-card-tag">Neck Pain</span><span class="blog-card-tag">Sports Injury</span>
-            <span class="blog-card-tag">Posture</span><span class="blog-card-tag">Exercise</span><span class="blog-card-tag">Recovery</span>
+            <span class="blog-card-tag">Back Pain</span><span class="blog-card-tag">Neck Pain</span><span
+              class="blog-card-tag">Sports Injury</span>
+            <span class="blog-card-tag">Posture</span><span class="blog-card-tag">Exercise</span><span
+              class="blog-card-tag">Recovery</span>
             <span class="blog-card-tag">Surgery Rehab</span><span class="blog-card-tag">Wellness</span>
           </div>
         </div>
         <div class="blog-sidebar-card" style="background:var(--primary);color:#fff;text-align:center">
           <i class="fas fa-calendar-check" style="font-size:2rem;margin-bottom:12px"></i>
           <h4 style="color:#fff;border:none;padding:0">Need Treatment?</h4>
-          <p style="font-size:.88rem;opacity:.9;margin:8px 0 16px">Book an appointment with our expert physiotherapist</p>
+          <p style="font-size:.88rem;opacity:.9;margin:8px 0 16px">Book an appointment with our expert physiotherapist
+          </p>
           <a href="appointment.html" class="btn btn-white" style="width:100%;justify-content:center">Book Now</a>
         </div>
       </aside>
@@ -129,18 +185,50 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-about"><h3>Neurofit <span>Physio</span></h3><p>Trusted physiotherapy clinic offering evidence-based treatments.</p>
-          <div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+        <div class="footer-about">
+          <h3>Neurofit <span>Physio</span></h3>
+          <p>Trusted physiotherapy clinic offering evidence-based treatments.</p>
+          <div class="footer-socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
+                class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i
+                class="fab fa-linkedin-in"></i></a></div>
         </div>
-        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div class="footer-col"><h4>Services</h4><ul><li><a href="service-detail.html?service=back-pain">Back Pain</a></li><li><a href="service-detail.html?service=neck-pain">Neck Pain</a></li><li><a href="service-detail.html?service=sports-injury">Sports Injury</a></li></ul></div>
-        <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+919876543210"><i class="fas fa-phone-alt"></i> +91 98765 43210</a></li><li><a href="mailto:info@neurofitphysio.com"><i class="fas fa-envelope"></i> info@neurofitphysio.com</a></li></ul></div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="offers.html">Offers</a>
+        <a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="service-detail.html?service=back-pain">Back Pain</a></li>
+            <li><a href="service-detail.html?service=neck-pain">Neck Pain</a></li>
+            <li><a href="service-detail.html?service=sports-injury">Sports Injury</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+919023931863"><i class="fas fa-phone-alt"></i> +91 90239 31863</a></li>
+            <li><a href="mailto:info@neurofitphysio.com"><i class="fas fa-envelope"></i> info@neurofitphysio.com</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-bottom"><p>&copy; 2026 Neurofit Advance Physiotherapy Center. All Rights Reserved.</p></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Neurofit Advance Physiotherapy Center. All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
-  <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float" id="whatsappBtn"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://wa.me/919023931863" target="_blank" class="whatsapp-float" id="whatsappBtn"><i
+      class="fab fa-whatsapp"></i></a>
   <a href="#" class="back-top" id="backTop"><i class="fas fa-chevron-up"></i></a>
   <script src="script.js"></script>
 </body>
+
 </html>

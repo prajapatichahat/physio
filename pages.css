@@ -1,5 +1,5 @@
 /* ===== PAGE HERO BANNER ===== */
-.page-hero{padding:140px 0 60px;background:linear-gradient(135deg,rgba(15,32,39,.92),rgba(10,110,122,.8)),url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1400&q=80') center/cover no-repeat;color:#fff;text-align:center}
+.page-hero{padding:140px 0 60px;background:var(--primary-dark);color:#fff;text-align:center}
 .page-hero h1{color:#fff;font-size:2.6rem;margin-bottom:8px}
 .page-hero p{opacity:.85;font-size:1.1rem}
 .breadcrumb{display:flex;justify-content:center;gap:8px;margin-top:16px;font-size:.9rem;opacity:.8}

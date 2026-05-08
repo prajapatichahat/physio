@@ -99,7 +99,7 @@ function submitWizard() {
 
   const text = `Hello Neurofit Physio!%0A%0A*New Online Appointment Booking*%0A%0A📋 *Appointment Details*%0AType: ${selectedMeetingType}%0AService: ${service}%0ADate: ${date}%0ATime: ${selectedTimeSlot}%0A%0A👤 *Patient Details*%0AName: ${name}%0APhone: ${phone}%0AAge: ${age}%0AGender: ${gender}%0ACondition: ${condition || 'N/A'}`;
 
-  window.open(`https://wa.me/919876543210?text=${text}`, '_blank');
+  window.open(`https://wa.me/919023931863?text=${text}`, '_blank');
 
   // Show success state
   const panel = document.getElementById('wizStep3');
@@ -111,7 +111,7 @@ function submitWizard() {
         <p style="color:var(--gray-500)">Your appointment request has been sent via WhatsApp. Our team will confirm your appointment within 24 hours.</p>
         <div style="margin-top:20px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
           <a href="index.html" class="btn btn-outline">Back to Home</a>
-          <a href="tel:+919876543210" class="btn btn-primary"><i class="fas fa-phone"></i> Call for Instant Confirm</a>
+          <a href="tel:+919023931863" class="btn btn-primary"><i class="fas fa-phone"></i> Call for Instant Confirm</a>
         </div>
       </div>
     `;
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (i === 5) desc = inp.value;
       });
       const text = `Hello Neurofit Physio!%0A%0A*Online Guidance Request*%0AName: ${name}%0APhone: ${phone}%0AConcern: ${concern}%0APreferred Time: ${time}%0ADescription: ${desc || 'N/A'}`;
-      window.open(`https://wa.me/919876543210?text=${text}`, '_blank');
+      window.open(`https://wa.me/919023931863?text=${text}`, '_blank');
       const btn = guidanceForm.querySelector('button[type="submit"]');
       const original = btn.innerHTML;
       btn.innerHTML = '<i class="fas fa-check"></i> Request Sent!';
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let phone = inputs[1]?.value || '';
       let date = inputs[2]?.value || '';
       const text = `Hello Neurofit Physio!%0A%0A*Quick Booking Request*%0AService: ${serviceName}%0AName: ${name}%0APhone: ${phone}%0ADate: ${date}`;
-      window.open(`https://wa.me/919876543210?text=${text}`, '_blank');
+      window.open(`https://wa.me/919023931863?text=${text}`, '_blank');
       const btn = quickBookForm.querySelector('button[type="submit"]');
       const original = btn.innerHTML;
       btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
