@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       popupModalBody.innerHTML = contentHTML;
       homePopupModal.classList.add('active');
-    }, 1000); // 1.5 seconds delay before popup shows
+    }, 500); // .5 seconds delay before popup shows
     // Close functionality
     if (closePopupModal) {
       closePopupModal.addEventListener('click', () => {
