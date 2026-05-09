@@ -1,4 +1,4 @@
-// ===== NEUROFIT - GLOBAL SCRIPTS =====
+// ===== PHYSIO - GLOBAL SCRIPTS =====
 document.addEventListener('DOMContentLoaded', () => {
 
   // ===== NAVBAR SCROLL =====
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const service = document.getElementById('apptService').value;
       const date = document.getElementById('apptDate').value;
       const msg = document.getElementById('apptMsg').value;
-      const text = `Hello Neurofit Physio!%0A%0A*New Appointment Request*%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0ADate: ${date}%0AMessage: ${msg || 'N/A'}`;
+      const text = `Hello PHYSIO!%0A%0A*New Appointment Request*%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0ADate: ${date}%0AMessage: ${msg || 'N/A'}`;
       window.open(`https://wa.me/919023931863?text=${text}`, '_blank');
       const btn = form.querySelector('button[type="submit"]');
       const original = btn.innerHTML;
@@ -269,3 +269,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // });
   }
 });
+

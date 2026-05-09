@@ -1,4 +1,4 @@
-// ===== NEUROFIT - INNER PAGES SCRIPTS =====
+// ===== PHYSIO - INNER PAGES SCRIPTS =====
 
 // ===== FAQ ACCORDION =====
 function toggleFaq(el) {
@@ -97,7 +97,7 @@ function submitWizard() {
   const gender = document.getElementById('wizGender')?.value || '';
   const condition = document.getElementById('wizCondition')?.value || '';
 
-  const text = `Hello Neurofit Physio!%0A%0A*New Online Appointment Booking*%0A%0A📋 *Appointment Details*%0AType: ${selectedMeetingType}%0AService: ${service}%0ADate: ${date}%0ATime: ${selectedTimeSlot}%0A%0A👤 *Patient Details*%0AName: ${name}%0APhone: ${phone}%0AAge: ${age}%0AGender: ${gender}%0ACondition: ${condition || 'N/A'}`;
+  const text = `Hello PHYSIO!%0A%0A*New Online Appointment Booking*%0A%0A📋 *Appointment Details*%0AType: ${selectedMeetingType}%0AService: ${service}%0ADate: ${date}%0ATime: ${selectedTimeSlot}%0A%0A👤 *Patient Details*%0AName: ${name}%0APhone: ${phone}%0AAge: ${age}%0AGender: ${gender}%0ACondition: ${condition || 'N/A'}`;
 
   window.open(`https://wa.me/919023931863?text=${text}`, '_blank');
 
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (i === 4) time = inp.value;
         if (i === 5) desc = inp.value;
       });
-      const text = `Hello Neurofit Physio!%0A%0A*Online Guidance Request*%0AName: ${name}%0APhone: ${phone}%0AConcern: ${concern}%0APreferred Time: ${time}%0ADescription: ${desc || 'N/A'}`;
+      const text = `Hello PHYSIO!%0A%0A*Online Guidance Request*%0AName: ${name}%0APhone: ${phone}%0AConcern: ${concern}%0APreferred Time: ${time}%0ADescription: ${desc || 'N/A'}`;
       window.open(`https://wa.me/919023931863?text=${text}`, '_blank');
       const btn = guidanceForm.querySelector('button[type="submit"]');
       const original = btn.innerHTML;
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let name = inputs[0]?.value || '';
       let phone = inputs[1]?.value || '';
       let date = inputs[2]?.value || '';
-      const text = `Hello Neurofit Physio!%0A%0A*Quick Booking Request*%0AService: ${serviceName}%0AName: ${name}%0APhone: ${phone}%0ADate: ${date}`;
+      const text = `Hello PHYSIO!%0A%0A*Quick Booking Request*%0AService: ${serviceName}%0AName: ${name}%0APhone: ${phone}%0ADate: ${date}`;
       window.open(`https://wa.me/919023931863?text=${text}`, '_blank');
       const btn = quickBookForm.querySelector('button[type="submit"]');
       const original = btn.innerHTML;
@@ -164,3 +164,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
