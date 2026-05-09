@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Detail Settings - Physio Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h4>Physio Admin</h4>
+        </div>
+        <ul class="list-unstyled components">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="active">
+                <a href="#contentSubmenu" data-bs-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                    <i class="fas fa-file-alt"></i> Website Content
+                </a>
+                <ul class="collapse show list-unstyled ps-4" id="contentSubmenu">
+                    <li><a href="hero-settings.html">Hero Section</a></li>
+                    <li><a href="about-settings.html">About Section</a></li>
+                    <li><a href="doctors.html">Doctor Profiles</a></li>
+                    <li><a href="services.html">Services List</a></li>
+                    <li class="active"><a href="service-detail-settings.html">Service Details</a></li>
+                    <li><a href="offers.html">Offers Section</a></li>
+                    <li><a href="blogs.html">Blog Posts</a></li>
+                    <li><a href="reviews.html">Testimonials</a></li>
+                </ul>
+            </li>
+            <li><a href="appointments.html"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+            <li><a href="patients.html"><i class="fas fa-user-injured"></i> Patients</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Website Settings</a></li>
+            <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile Settings</a></li>
+            <li><a href="login.html" class="text-danger"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+
+        <div class="container-fluid px-4">
+            <h2 class="mb-4">Service Page Detail Management</h2>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-4">
+                            <label class="form-label">Select Service to Edit</label>
+                            <select class="form-select border-primary">
+                                <option selected>Back Pain Treatment</option>
+                                <option>Neck Pain Therapy</option>
+                                <option>Sports Injury Rehab</option>
+                                <option>Paralysis Treatment</option>
+                                <option>Post Surgery Rehab</option>
+                                <option>Pediatric Physiotherapy</option>
+                            </select>
+                        </div>
+                        <div class="col-md-8 text-end">
+                            <span class="text-muted small"><i class="fas fa-info-circle me-1"></i> Changes will apply to the specific service page selected.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form>
+                <!-- Hero Section -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Hero Content</h5>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Page Title</label>
+                                <input type="text" class="form-control" value="Back Pain Treatment">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Hero Subtitle</label>
+                                <input type="text" class="form-control" value="Advanced spinal therapy for lasting relief">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Description -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Service Description</h5>
+                        <div class="mb-3">
+                            <label class="form-label">Introduction Title</label>
+                            <input type="text" class="form-control" value="What is Back Pain Treatment?">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Main Content</label>
+                            <textarea class="form-control" rows="5">Back pain is one of the most common conditions affecting people of all ages. At PHYSIO Advance Physiotherapy Center, we use a combination of manual therapy, electrotherapy, and therapeutic exercises to provide lasting relief from both acute and chronic back pain.</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Treatment Process -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="card-title mb-0">Treatment Process Steps</h5>
+                            <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-plus me-1"></i> Add Step</button>
+                        </div>
+                        <div class="process-steps">
+                            <div class="row mb-3 border-bottom pb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label">Step Title</label>
+                                    <input type="text" class="form-control" value="Step 1: Detailed Assessment">
+                                </div>
+                                <div class="col-md-8">
+                                    <label class="form-label">Step Description</label>
+                                    <textarea class="form-control" rows="2">Comprehensive evaluation of your condition, posture, range of motion, and pain patterns to create a personalized treatment plan.</textarea>
+                                </div>
+                                <div class="col-md-1 d-flex align-items-end">
+                                    <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+                            <!-- More steps as needed -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="card-title mb-0">Key Benefits Checklist</h5>
+                            <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-plus me-1"></i> Add Benefit</button>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-check text-success"></i></span>
+                                    <input type="text" class="form-control" value="Non-surgical pain relief">
+                                    <button class="btn btn-outline-danger" type="button"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-check text-success"></i></span>
+                                    <input type="text" class="form-control" value="Personalized treatment plans">
+                                    <button class="btn btn-outline-danger" type="button"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                            <!-- More benefits -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="card-title mb-0">Frequently Asked Questions</h5>
+                            <button type="button" class="btn btn-sm btn-outline-primary"><i class="fas fa-plus me-1"></i> Add FAQ</button>
+                        </div>
+                        <div class="faq-items">
+                            <div class="mb-4 border-bottom pb-3">
+                                <div class="mb-2">
+                                    <label class="form-label">Question</label>
+                                    <input type="text" class="form-control" value="How many sessions will I need?">
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label">Answer</label>
+                                    <textarea class="form-control" rows="3">Most patients experience significant relief within 8-15 sessions. The exact number depends on the severity and chronicity of your condition.</textarea>
+                                </div>
+                                <div class="text-end">
+                                    <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash me-1"></i> Remove FAQ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-5 text-end">
+                    <button type="button" class="btn btn-light btn-lg me-2">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-lg px-5">Save All Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

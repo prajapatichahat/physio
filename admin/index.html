@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Physio Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../logo.png" alt="Logo" width="100" class="rounded">
+                <!-- <span>PHOENIX</span> -->
+            </div>
+            <ul class="list-unstyled components">
+                <li class="active"><a href="index.html"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                <li>
+                    <a href="#contentSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-layer-group"></i> Site Content
+                    </a>
+                    <ul class="collapse list-unstyled ps-4" id="contentSubmenu">
+                        <li><a href="hero-settings.html">Hero Section</a></li>
+                        <li><a href="about-settings.html">About Section</a></li>
+                        <li><a href="doctors.html">Doctor Profiles</a></li>
+                        <li><a href="services.html">Services List</a></li>
+                        <li><a href="service-detail-settings.html">Service Details</a></li>
+                        <li><a href="offers.html">Offers</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </li>
+                <li><a href="appointments.html"><i class="fas fa-calendar-alt"></i> Appointments</a></li>
+                <li><a href="patients.html"><i class="fas fa-user-injured"></i> Patient CRM</a></li>
+                <li><a href="settings.html"><i class="fas fa-sliders-h"></i> System Settings</a></li>
+                <li><a href="profile.html"><i class="fas fa-user-shield"></i> Account Settings</a></li>
+                <li class="mt-4"><a href="login.html" class="text-danger"><i class="fas fa-power-off"></i> Sign Out</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <!-- Top Navbar -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-light shadow-sm me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+                    <div class="top-search d-none d-md-flex">
+                        <i class="fas fa-search text-muted"></i>
+                        <input type="text" placeholder="Search patients, bookings...">
+                    </div>
+
+                    <div class="ms-auto d-flex align-items-center gap-3">
+                        <div class="dropdown">
+                            <button class="btn btn-light position-relative rounded-circle p-2 shadow-sm" type="button"
+                                data-bs-toggle="dropdown">
+                                <i class="fas fa-bell text-muted"></i>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                    style="padding: 4px 6px; font-size: 0.6rem;">
+                                    3
+                                </span>
+                            </button>
+                        </div>
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown">
+                                <img src="https://ui-avatars.com/api/?name=Admin&background=3874ff&color=fff"
+                                    class="rounded-circle me-2" width="38" height="38" alt="Admin">
+                                <div class="d-none d-md-block">
+                                    <p class="mb-0 small fw-bold">Admin User</p>
+                                    <p class="mb-0 text-muted" style="font-size: 0.7rem;">Super Admin</p>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+                                <li><a class="dropdown-item py-2" href="profile.html"><i
+                                            class="fas fa-user me-2 text-muted"></i> Profile</a></li>
+                                <li><a class="dropdown-item py-2" href="settings.html"><i
+                                            class="fas fa-cog me-2 text-muted"></i> Settings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item py-2 text-danger" href="login.html"><i
+                                            class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid px-0">
+                <div class="mb-4">
+                    <h3 class="fw-bold mb-1">Clinic Dashboard</h3>
+                    <p class="text-muted small">Here's what's happening at your center right now.</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="row g-4 mb-4">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card border-0 h-100">
+                            <div class="stat-card-v2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <div class="icon-box" style="background: #eef2ff; color: #3874ff;">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <span class="text-success fw-bold small">+12.5% <i
+                                            class="fas fa-arrow-up"></i></span>
+                                </div>
+                                <h2 class="stat-value">1,284</h2>
+                                <p class="stat-label">Total Patients</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card border-0 h-100">
+                            <div class="stat-card-v2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <div class="icon-box" style="background: #ecfdf5; color: #10b981;">
+                                        <i class="fas fa-calendar-check"></i>
+                                    </div>
+                                    <span class="text-success fw-bold small">+5.2% <i
+                                            class="fas fa-arrow-up"></i></span>
+                                </div>
+                                <h2 class="stat-value">4,520</h2>
+                                <p class="stat-label">Appointments</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card border-0 h-100">
+                            <div class="stat-card-v2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <div class="icon-box" style="background: #fff7ed; color: #f59e0b;">
+                                        <i class="fas fa-wallet"></i>
+                                    </div>
+                                    <span class="text-danger fw-bold small">-2.1% <i
+                                            class="fas fa-arrow-down"></i></span>
+                                </div>
+                                <h2 class="stat-value">$84,200</h2>
+                                <p class="stat-label">Revenue</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <!-- Blinking Incoming Appointments Card -->
+                        <div class="card border-0 h-100 incoming-pulse">
+                            <div class="stat-card-v2">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <div class="icon-box" style="background: #fff1f2; color: #fa5252;">
+                                        <i class="fas fa-bell"></i>
+                                    </div>
+                                    <span class="badge bg-danger">New!</span>
+                                </div>
+                                <h2 class="stat-value">12</h2>
+                                <p class="stat-label">Incoming Bookings</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="row g-4 mb-4">
+                    <div class="col-xl-8">
+                        <div class="card border-0 h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h5 class="card-title mb-0">Patients Comparison</h5>
+                                    <select class="form-select form-select-sm border-0 bg-light w-auto">
+                                        <option>Last 12 Months</option>
+                                        <option>Last 6 Months</option>
+                                    </select>
+                                </div>
+                                <div style="height: 350px;" class="chart-container">
+                                    <canvas id="patientChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="card border-0 h-100">
+                            <div class="card-body p-4 text-center">
+                                <h5 class="card-title mb-4">Age Distribution</h5>
+                                <div style="height: 300px;" class="chart-container">
+                                    <canvas id="ageChart"></canvas>
+                                </div>
+                                <div class="mt-4 d-flex justify-content-center gap-3">
+                                    <small><i class="fas fa-circle me-1" style="color: #4338ca;"></i> 19-35</small>
+                                    <small><i class="fas fa-circle me-1" style="color: #0ea5e9;"></i> 36-50</small>
+                                    <small><i class="fas fa-circle me-1" style="color: #10b981;"></i> 51+</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-xl-12">
+                        <div class="card border-0">
+                            <div class="card-body p-4">
+                                <h5 class="card-title mb-4">Revenue Comparison (2025 vs 2026)</h5>
+                                <div style="height: 350px;" class="chart-container">
+                                    <canvas id="revenueChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Section: Tables -->
+                <div class="row g-4">
+                    <div class="col-xl-8">
+                        <div class="card border-0">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h5 class="card-title mb-0">Recent Appointments & Visit Types</h5>
+                                    <a href="appointments.html" class="btn btn-sm btn-light">View All</a>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Patient</th>
+                                            <th>Service</th>
+                                            <th>Type</th>
+                                            <th>Time</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://ui-avatars.com/api/?name=JD&background=eef2ff&color=3874ff" class="rounded-circle me-2" width="30">
+                                                    <span>John Doe</span>
+                                                </div>
+                                            </td>
+                                            <td>Back Pain</td>
+                                            <td><span class="badge badge-clinic">Hospital</span></td>
+                                            <td>10:30 AM</td>
+                                            <td><span class="badge" style="background: #eef2ff; color: #3874ff;">Confirmed</span></td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reviews Table -->
+                        <div class="card mt-4">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h5 class="card-title mb-0">Recent Patient Reviews</h5>
+                                    <a href="reviews.html" class="btn btn-sm btn-outline-primary">View All</a>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>Patient Name</th>
+                                                <th>Rating</th>
+                                                <th>Review</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Michael Brown</td>
+                                                <td>
+                                                    <div class="text-warning">
+                                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i>
+                                                    </div>
+                                                </td>
+                                                <td>Excellent treatment for my back pain. Highly recommended!</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Emma Davis</td>
+                                                <td>
+                                                    <div class="text-warning">
+                                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                            class="far fa-star"></i>
+                                                    </div>
+                                                </td>
+                                                <td>Very professional staff and clean clinic.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4">
+                        <div class="card border-0">
+                            <div class="card-body p-4">
+                                <div class="calendar-widget">
+                                    <div class="calendar-header">
+                                        <h5 class="card-title mb-0">Dr. Schedule</h5>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-sm btn-light p-1 px-2"><i class="fas fa-chevron-left small"></i></button>
+                                            <button class="btn btn-sm btn-light p-1 px-2"><i class="fas fa-chevron-right small"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="calendar-grid mb-3">
+                                        <div class="calendar-day-label">S</div>
+                                        <div class="calendar-day-label">M</div>
+                                        <div class="calendar-day-label">T</div>
+                                        <div class="calendar-day-label">W</div>
+                                        <div class="calendar-day-label">T</div>
+                                        <div class="calendar-day-label">F</div>
+                                        <div class="calendar-day-label">S</div>
+                                        
+                                        <div class="calendar-day text-muted">26</div>
+                                        <div class="calendar-day text-muted">27</div>
+                                        <div class="calendar-day text-muted">28</div>
+                                        <div class="calendar-day text-muted">29</div>
+                                        <div class="calendar-day text-muted">30</div>
+                                        <div class="calendar-day">1</div>
+                                        <div class="calendar-day">2</div>
+                                        <div class="calendar-day">3</div>
+                                        <div class="calendar-day">4</div>
+                                        <div class="calendar-day">5</div>
+                                        <div class="calendar-day">6</div>
+                                        <div class="calendar-day">7</div>
+                                        <div class="calendar-day">8</div>
+                                        <div class="calendar-day active shadow-sm">9</div>
+                                        <div class="calendar-day has-event">10</div>
+                                        <div class="calendar-day">11</div>
+                                        <div class="calendar-day">12</div>
+                                        <div class="calendar-day">13</div>
+                                        <div class="calendar-day">14</div>
+                                        <div class="calendar-day">15</div>
+                                    </div>
+                                    
+                                    <h6 class="fw-bold small mb-3">Today's Appointments</h6>
+                                    <div class="schedule-list">
+                                        <div class="schedule-item">
+                                            <div class="schedule-time">09:00 AM</div>
+                                            <div class="schedule-info">
+                                                <h6>Clinical Rounds</h6>
+                                                <p>Main Hospital Wing</p>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-item">
+                                            <div class="schedule-time">10:30 AM</div>
+                                            <div class="schedule-info">
+                                                <h6>John Doe</h6>
+                                                <p>Back Pain Therapy (Clinic)</p>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-item">
+                                            <div class="schedule-time">11:45 AM</div>
+                                            <div class="schedule-info">
+                                                <h6>Sarah Smith</h6>
+                                                <p>Home Visit Consultation</p>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-item">
+                                            <div class="schedule-time">02:15 PM</div>
+                                            <div class="schedule-info">
+                                                <h6>Robert Wilson</h6>
+                                                <p>Online Neuro Rehab</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

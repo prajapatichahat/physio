@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Management - Physio Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h4>Physio Admin</h4>
+        </div>
+        <ul class="list-unstyled components">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="active">
+                <a href="#contentSubmenu" data-bs-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                    <i class="fas fa-file-alt"></i> Website Content
+                </a>
+                <ul class="collapse show list-unstyled ps-4" id="contentSubmenu">
+                    <li><a href="hero-settings.html">Hero Section</a></li>
+                    <li><a href="about-settings.html">About Section</a></li>
+                    <li><a href="doctors.html">Doctor Profiles</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="offers.html">Offers Section</a></li>
+                    <li class="active"><a href="blogs.html">Blog Posts</a></li>
+                    <li><a href="reviews.html">Testimonials</a></li>
+                </ul>
+            </li>
+            <li><a href="appointments.html"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+            <li><a href="patients.html"><i class="fas fa-user-injured"></i> Patients</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Website Settings</a></li>
+            <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile Settings</a></li>
+            <li><a href="login.html" class="text-danger"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+
+        <div class="container-fluid px-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Blog Posts</h2>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBlogModal"><i class="fas fa-plus me-2"></i> Create New Post</button>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Title</th>
+                                    <th>Date Published</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="rounded" width="60"></td>
+                                    <td>5 Exercises for Lower Back Pain</td>
+                                    <td>May 05, 2026</td>
+                                    <td><span class="badge bg-success">Published</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="rounded" width="60"></td>
+                                    <td>Benefits of Stretching Every Day</td>
+                                    <td>May 02, 2026</td>
+                                    <td><span class="badge bg-warning text-dark">Draft</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary me-1"><i class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Blog Modal -->
+<div class="modal fade" id="addBlogModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create New Blog Post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Blog Title</label>
+                        <input type="text" class="form-control" placeholder="Enter post title">
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Category</label>
+                            <select class="form-select">
+                                <option>Recovery</option>
+                                <option>Wellness</option>
+                                <option>Exercises</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Publish Date</label>
+                            <input type="date" class="form-control">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Featured Image</label>
+                        <input type="file" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Description / Content</label>
+                        <textarea class="form-control" rows="8" placeholder="Write your blog content here..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save as Draft</button>
+                <button type="button" class="btn btn-success">Publish Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

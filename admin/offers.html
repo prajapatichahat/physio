@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers - Physio Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h4>Physio Admin</h4>
+        </div>
+        <ul class="list-unstyled components">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="active">
+                <a href="#contentSubmenu" data-bs-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                    <i class="fas fa-file-alt"></i> Website Content
+                </a>
+                <ul class="collapse show list-unstyled ps-4" id="contentSubmenu">
+                    <li><a href="hero-settings.html">Hero Section</a></li>
+                    <li><a href="about-settings.html">About Section</a></li>
+                    <li><a href="doctors.html">Doctor Profiles</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li class="active"><a href="offers.html">Offers Section</a></li>
+                    <li><a href="blogs.html">Blog Posts</a></li>
+                    <li><a href="reviews.html">Testimonials</a></li>
+                </ul>
+            </li>
+            <li><a href="appointments.html"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+            <li><a href="patients.html"><i class="fas fa-user-injured"></i> Patients</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Website Settings</a></li>
+            <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile Settings</a></li>
+            <li><a href="login.html" class="text-danger"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+
+        <div class="container-fluid px-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Special Offers & Banners</h2>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addOfferModal"><i class="fas fa-plus me-2"></i> Add New Offer</button>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card overflow-hidden">
+                        <img src="../offer-banner.png" class="card-img-top" alt="Offer Banner" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Free OPD Checkup</h5>
+                                <span class="badge bg-success">Active</span>
+                            </div>
+                            <p class="text-muted small">Available every Friday and Saturday. Get a comprehensive physical evaluation for free.</p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-sm btn-outline-primary w-50"><i class="fas fa-edit me-1"></i> Edit</button>
+                                <button class="btn btn-sm btn-outline-danger w-50"><i class="fas fa-trash me-1"></i> Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Offer Modal -->
+<div class="modal fade" id="addOfferModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create New Offer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Offer Title</label>
+                        <input type="text" class="form-control" placeholder="e.g. 20% Off First Visit">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Description</label>
+                        <textarea class="form-control" rows="3" placeholder="Explain the offer details..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Banner Image Upload</label>
+                        <input type="file" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Publish Offer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

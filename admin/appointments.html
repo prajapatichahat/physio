@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - Physio Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <img src="../logo.png" alt="Logo" width="30" class="rounded">
+            <span>PHOENIX</span>
+        </div>
+        <ul class="list-unstyled components">
+            <li><a href="index.html"><i class="fas fa-th-large"></i> Dashboard</a></li>
+            <li>
+                <a href="#contentSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-layer-group"></i> Site Content
+                </a>
+                <ul class="collapse list-unstyled ps-4" id="contentSubmenu">
+                    <li><a href="hero-settings.html">Hero Section</a></li>
+                    <li><a href="about-settings.html">About Section</a></li>
+                    <li><a href="doctors.html">Doctor Profiles</a></li>
+                    <li><a href="services.html">Services List</a></li>
+                    <li><a href="service-detail-settings.html">Service Details</a></li>
+                    <li><a href="offers.html">Offers</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </li>
+            <li class="active"><a href="appointments.html"><i class="fas fa-calendar-alt"></i> Appointments</a></li>
+            <li><a href="patients.html"><i class="fas fa-user-injured"></i> Patient CRM</a></li>
+            <li><a href="settings.html"><i class="fas fa-sliders-h"></i> System Settings</a></li>
+            <li><a href="profile.html"><i class="fas fa-user-shield"></i> Account Settings</a></li>
+            <li class="mt-4"><a href="login.html" class="text-danger"><i class="fas fa-power-off"></i> Sign Out</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="content">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn btn-light shadow-sm me-3">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="top-search d-none d-md-flex">
+                    <i class="fas fa-search text-muted"></i>
+                    <input type="text" placeholder="Search appointments...">
+                </div>
+                <div class="ms-auto">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addAppointmentModal">
+                        <i class="fas fa-plus me-2"></i> Book Appointment
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid px-0">
+            <div class="mb-4">
+                <h3 class="fw-bold mb-1">Appointment Management</h3>
+                <p class="text-muted small">View and manage all patient bookings, including online and home visits.</p>
+            </div>
+
+            <div class="card border-0">
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Patient</th>
+                                    <th>Service</th>
+                                    <th>Type</th>
+                                    <th>Date & Time</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="https://ui-avatars.com/api/?name=JD&background=eef2ff&color=3874ff" class="rounded-circle me-2" width="35">
+                                            <div>
+                                                <div class="fw-bold">John Doe</div>
+                                                <div class="text-muted small">+91 98765 43210</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Back Pain Therapy</td>
+                                    <td><span class="badge badge-clinic">Hospital</span></td>
+                                    <td>
+                                        <div>May 10, 2026</div>
+                                        <div class="text-muted small">10:30 AM</div>
+                                    </td>
+                                    <td><span class="badge" style="background: #eef2ff; color: #3874ff;">Confirmed</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-light"><i class="fas fa-edit text-primary"></i></button>
+                                        <button class="btn btn-sm btn-light"><i class="fas fa-trash text-danger"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="https://ui-avatars.com/api/?name=SS&background=ecfdf5&color=10b981" class="rounded-circle me-2" width="35">
+                                            <div>
+                                                <div class="fw-bold">Sarah Smith</div>
+                                                <div class="text-muted small">+91 98765 43211</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Neurological Rehab</td>
+                                    <td><span class="badge badge-home">Home Visit</span></td>
+                                    <td>
+                                        <div>May 10, 2026</div>
+                                        <div class="text-muted small">11:45 AM</div>
+                                    </td>
+                                    <td><span class="badge" style="background: #fff7ed; color: #f59e0b;">Waiting</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-light"><i class="fas fa-edit text-primary"></i></button>
+                                        <button class="btn btn-sm btn-light"><i class="fas fa-trash text-danger"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="https://ui-avatars.com/api/?name=RW&background=fff1f2&color=fa5252" class="rounded-circle me-2" width="35">
+                                            <div>
+                                                <div class="fw-bold">Robert Wilson</div>
+                                                <div class="text-muted small">+91 98765 43212</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Stroke Recovery</td>
+                                    <td><span class="badge badge-online">Online</span></td>
+                                    <td>
+                                        <div>May 11, 2026</div>
+                                        <div class="text-muted small">02:15 PM</div>
+                                    </td>
+                                    <td><span class="badge" style="background: #eef2ff; color: #3874ff;">Confirmed</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-light"><i class="fas fa-edit text-primary"></i></button>
+                                        <button class="btn btn-sm btn-light"><i class="fas fa-trash text-danger"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addAppointmentModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header border-bottom-0 pt-4 px-4">
+                <h5 class="fw-bold">Book New Appointment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold text-muted text-uppercase">Patient Name</label>
+                        <input type="text" class="form-control form-control-lg border-light bg-light" placeholder="e.g. John Doe">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold text-muted text-uppercase">Appointment Type</label>
+                        <select class="form-select form-control-lg border-light bg-light">
+                            <option value="clinic">Clinic / Hospital Visit</option>
+                            <option value="home">Home Visit (Physio at Home)</option>
+                            <option value="online">Online Consultation</option>
+                        </select>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold text-muted text-uppercase">Date</label>
+                            <input type="date" class="form-control form-control-lg border-light bg-light">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold text-muted text-uppercase">Time</label>
+                            <input type="time" class="form-control form-control-lg border-light bg-light">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold text-muted text-uppercase">Service Category</label>
+                        <select class="form-select form-control-lg border-light bg-light">
+                            <option>Orthopedic Physiotherapy</option>
+                            <option>Neurological Physiotherapy</option>
+                            <option>Sports Injury</option>
+                            <option>Pediatric Physiotherapy</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer border-top-0 pb-4 px-4">
+                <button type="button" class="btn btn-light px-4" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary px-4">Confirm Booking</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

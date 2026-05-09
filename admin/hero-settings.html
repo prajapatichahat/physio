@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section Settings - Physio Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h4>Physio Admin</h4>
+        </div>
+        <ul class="list-unstyled components">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="active">
+                <a href="#contentSubmenu" data-bs-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                    <i class="fas fa-file-alt"></i> Website Content
+                </a>
+                <ul class="collapse show list-unstyled ps-4" id="contentSubmenu">
+                    <li class="active"><a href="hero-settings.html">Hero Section</a></li>
+                    <li><a href="about-settings.html">About Section</a></li>
+                    <li><a href="doctors.html">Doctor Profiles</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="offers.html">Offers Section</a></li>
+                    <li><a href="blogs.html">Blog Posts</a></li>
+                    <li><a href="reviews.html">Testimonials</a></li>
+                </ul>
+            </li>
+            <li><a href="appointments.html"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+            <li><a href="patients.html"><i class="fas fa-user-injured"></i> Patients</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Website Settings</a></li>
+            <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile Settings</a></li>
+            <li><a href="login.html" class="text-danger"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+
+        <div class="container-fluid px-4">
+            <h2 class="mb-4">Hero Section Management</h2>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title mb-4">Edit Hero Content</h5>
+                    <form>
+                        <div class="mb-4">
+                            <label class="form-label">Hero Main Title</label>
+                            <input type="text" class="form-control" value="Restore Your Movement, Reclaim Your Life">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Hero Subtitle / Description</label>
+                            <textarea class="form-control" rows="3">Expert physiotherapy treatments tailored to your needs. Get back to doing what you love with our professional care.</textarea>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label">Primary Button Text</label>
+                                <input type="text" class="form-control" value="Book Appointment">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Primary Button Link</label>
+                                <input type="text" class="form-control" value="appointment.html">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Hero Background Image</label>
+                            <div class="d-flex align-items-center">
+                                <div class="me-4 border rounded p-2" style="width: 200px; height: 120px; overflow: hidden;">
+                                    <img src="../physio_offer_banner.png" class="img-fluid" alt="Current Hero">
+                                </div>
+                                <input type="file" class="form-control">
+                            </div>
+                            <small class="text-muted">Recommended size: 1920x1080px. Max 2MB.</small>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-light me-2">Preview Changes</button>
+                            <button type="submit" class="btn btn-primary">Update Hero Section</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

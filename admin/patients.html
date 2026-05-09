@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients - Physio Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h4>Physio Admin</h4>
+        </div>
+        <ul class="list-unstyled components">
+            <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li>
+                <a href="#contentSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-file-alt"></i> Website Content
+                </a>
+                <ul class="collapse list-unstyled ps-4" id="contentSubmenu">
+                    <li><a href="hero-settings.html">Hero Section</a></li>
+                    <li><a href="about-settings.html">About Section</a></li>
+                    <li><a href="doctors.html">Doctor Profiles</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="offers.html">Offers Section</a></li>
+                    <li><a href="blogs.html">Blog Posts</a></li>
+                    <li><a href="reviews.html">Testimonials</a></li>
+                </ul>
+            </li>
+            <li><a href="appointments.html"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+            <li class="active"><a href="patients.html"><i class="fas fa-user-injured"></i> Patients</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Website Settings</a></li>
+            <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile Settings</a></li>
+            <li><a href="login.html" class="text-danger"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+
+        <div class="container-fluid px-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Patient Records</h2>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#addVisitModal"><i class="fas fa-plus-circle me-2"></i> Add Visit/Payment</button>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPatientModal"><i class="fas fa-user-plus me-2"></i> Register New Patient</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Patient ID</th>
+                                    <th>Name</th>
+                                    <th>Contact</th>
+                                    <th>Total Visits</th>
+                                    <th>Total Paid</th>
+                                    <th>Last Visit</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#P-1001</td>
+                                    <td>John Doe</td>
+                                    <td>+1 234 567 890</td>
+                                    <td><span class="badge bg-light text-dark">5 Visits</span></td>
+                                    <td><strong>$450.00</strong></td>
+                                    <td>May 05, 2026</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#viewHistoryModal" title="View History"><i class="fas fa-history"></i></button>
+                                        <button class="btn btn-sm btn-outline-primary me-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm btn-outline-danger" title="Delete"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#P-1002</td>
+                                    <td>Sarah Smith</td>
+                                    <td>+1 987 654 321</td>
+                                    <td><span class="badge bg-light text-dark">2 Visits</span></td>
+                                    <td><strong>$180.00</strong></td>
+                                    <td>May 08, 2026</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#viewHistoryModal" title="View History"><i class="fas fa-history"></i></button>
+                                        <button class="btn btn-sm btn-outline-primary me-1" title="Edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm btn-outline-danger" title="Delete"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- View History Modal -->
+<div class="modal fade" id="viewHistoryModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-light">
+                <h5 class="modal-title">Patient Visit & Payment History</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex justify-content-between mb-4">
+                    <div>
+                        <h4 class="mb-0">John Doe</h4>
+                        <p class="text-muted small">#P-1001 | 35 Years | Male</p>
+                    </div>
+                    <div class="text-end">
+                        <p class="mb-0 text-muted">Total Revenue Generated</p>
+                        <h3 class="text-primary">$450.00</h3>
+                    </div>
+                </div>
+                
+                <h6>Visit Logs</h6>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered">
+                        <thead class="bg-light">
+                            <tr>
+                                <th>Date</th>
+                                <th>Treatment / Reason</th>
+                                <th>Fee Charged</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>May 05, 2026</td>
+                                <td>Lower Back Pain Session</td>
+                                <td>$90.00</td>
+                                <td><span class="text-success"><i class="fas fa-check-circle"></i> Paid</span></td>
+                            </tr>
+                            <tr>
+                                <td>May 01, 2026</td>
+                                <td>Follow-up Consultation</td>
+                                <td>$50.00</td>
+                                <td><span class="text-success"><i class="fas fa-check-circle"></i> Paid</span></td>
+                            </tr>
+                            <tr>
+                                <td>Apr 28, 2026</td>
+                                <td>Manual Therapy</td>
+                                <td>$120.00</td>
+                                <td><span class="text-success"><i class="fas fa-check-circle"></i> Paid</span></td>
+                            </tr>
+                            <tr>
+                                <td>Apr 20, 2026</td>
+                                <td>Initial Assessment</td>
+                                <td>$150.00</td>
+                                <td><span class="text-success"><i class="fas fa-check-circle"></i> Paid</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addVisitModal">Add New Visit</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Visit/Payment Modal -->
+<div class="modal fade" id="addVisitModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Record New Visit & Payment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Select Patient</label>
+                        <select class="form-select">
+                            <option value="1">John Doe (#P-1001)</option>
+                            <option value="2">Sarah Smith (#P-1002)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Visit Date</label>
+                        <input type="date" class="form-control" value="2026-05-09">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Treatment / Reason</label>
+                        <input type="text" class="form-control" placeholder="e.g. Neck Pain Therapy">
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Fee Amount ($)</label>
+                            <input type="number" class="form-control" placeholder="0.00">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Payment Status</label>
+                            <select class="form-select">
+                                <option>Paid</option>
+                                <option>Pending</option>
+                                <option>Partially Paid</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Notes</label>
+                        <textarea class="form-control" rows="2" placeholder="Additional notes..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Save Visit & Add to Revenue</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Register New Patient Modal -->
+<div class="modal fade" id="addPatientModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Register New Patient</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Age</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Gender</label>
+                            <select class="form-select">
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Contact Number</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Address</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Register Patient</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
